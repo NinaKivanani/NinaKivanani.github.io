@@ -67,7 +67,7 @@ git push -u origin main
 
 Your website will be live at:
 ```
-https://ninahkivanani.github.io/NinaKivanani/
+https://ninakivanani.github.io/
 ```
 
 🎉 **Done! Your website is now public!**

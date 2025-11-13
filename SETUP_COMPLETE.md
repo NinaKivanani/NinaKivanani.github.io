@@ -56,7 +56,7 @@ git commit -m "Website setup complete - ready for deployment"
 git push
 ```
 
-**Your website will be live at**: `https://ninahkivanani.github.io/NinaKivanani/`
+**Your website is now live at**: `https://ninakivanani.github.io/`
 
 ⏰ Wait 1-2 minutes after pushing, then visit your URL!
 

@@ -6,7 +6,7 @@
 
 ## 🌐 Live Website
 
-Once deployed, your website will be available at: `https://ninahkivanani.github.io/NinaKivanani/`
+Your website is live at: **[https://ninakivanani.github.io/](https://ninakivanani.github.io/)**
 
 ---
 
@@ -95,7 +95,7 @@ git push -u origin main
    - **Folder**: `/ (root)`
 5. Click **"Save"**
 6. Wait 1-2 minutes, then refresh the page
-7. You'll see a message: **"Your site is live at https://ninahkivanani.github.io/NinaKivanani/"**
+7. You'll see a message: **"Your site is live at https://ninakivanani.github.io/"**
 
 🎉 **Congratulations!** Your website is now live!
 
