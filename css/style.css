@@ -1847,6 +1847,19 @@ body.dark .contact .contact-note strong {
   color: #ffffff;
 }
 
+/* Additional dark mode text visibility fixes */
+body.dark .section-title h2 {
+  color: #ffffff;
+}
+
+body.dark .research .research-icon,
+body.dark .talks .talk-item,
+body.dark .teaching .teaching-icon,
+body.dark .news .news-item,
+body.dark .contact .contact-icon {
+  color: #ffffff;
+}
+
 body.dark .aside,
 body.dark .contact .contact-form .form-item .form-control,
 body.dark .blog .blog-item-inner,
