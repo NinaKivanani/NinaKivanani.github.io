@@ -582,6 +582,392 @@ select {
   font-style: italic;
 }
 
+/* Research Section */
+.research .research-content {
+  width: 100%;
+  max-width: 100%;
+}
+
+.research .research-intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.research .research-intro p {
+  font-size: 18px;
+  line-height: 28px;
+  color: #504e70;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.research .research-areas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.research .research-area-item {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.research .research-area-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.research .research-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.research .research-area-item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #302e4d;
+  margin-bottom: 15px;
+  font-family: "Rubik", sans-serif;
+}
+
+.research .research-area-item p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #504e70;
+}
+
+.research .research-skills {
+  margin-top: 50px;
+}
+
+.research .research-skills h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #302e4d;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+}
+
+.research .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.research .skill-item-research {
+  padding: 20px;
+}
+
+.research .skill-item-research h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #302e4d;
+  margin-bottom: 15px;
+}
+
+/* Talks Section */
+.talks .talks-content {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.talks .talk-item {
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.talks .talk-item:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.talks .talk-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.talks .talk-header h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #302e4d;
+  margin: 0;
+  flex: 1;
+  min-width: 250px;
+}
+
+.talks .talk-type {
+  display: inline-block;
+  padding: 6px 15px;
+  background-color: #f8f9fa;
+  color: #504e70;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.talks .talk-details {
+  margin: 15px 0;
+}
+
+.talks .talk-details p {
+  font-size: 15px;
+  color: #504e70;
+  margin: 5px 0;
+}
+
+.talks .talk-venue {
+  font-weight: 600;
+}
+
+.talks .talk-description {
+  font-size: 16px;
+  line-height: 26px;
+  color: #504e70;
+  margin-top: 15px;
+}
+
+.talks .more-talks {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+.talks .more-talks a {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Teaching Section */
+.teaching .teaching-content {
+  width: 100%;
+}
+
+.teaching .teaching-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 30px;
+  margin-bottom: 25px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.teaching .teaching-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.teaching .teaching-icon {
+  font-size: 40px;
+  margin-right: 25px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.teaching .teaching-item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #302e4d;
+  margin-bottom: 10px;
+  font-family: "Rubik", sans-serif;
+}
+
+.teaching .teaching-item p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #504e70;
+  margin: 0;
+}
+
+/* News Section */
+.news .news-content {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.news .news-item {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+  margin-bottom: 25px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.news .news-item:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.news .news-date {
+  min-width: 80px;
+  text-align: center;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.news .news-date .month {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  color: #302e4d;
+  text-transform: uppercase;
+}
+
+.news .news-date .year {
+  display: block;
+  font-size: 16px;
+  color: #504e70;
+  margin-top: 5px;
+}
+
+.news .news-body h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #302e4d;
+  margin-bottom: 10px;
+  font-family: "Rubik", sans-serif;
+}
+
+.news .news-body p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #504e70;
+  margin: 0;
+}
+
+/* Contact Section */
+.contact .contact-content {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact .contact-intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact .contact-intro p {
+  font-size: 18px;
+  line-height: 28px;
+  color: #504e70;
+}
+
+.contact .contact-info-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.contact .contact-info-item {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.contact .contact-info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.contact .contact-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.contact .contact-info-item h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #302e4d;
+  margin-bottom: 15px;
+  font-family: "Rubik", sans-serif;
+}
+
+.contact .contact-info-item p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #504e70;
+  margin: 0;
+}
+
+.contact .contact-info-item a {
+  color: #504e70;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact .contact-info-item a:hover {
+  text-decoration: underline;
+}
+
+.contact .contact-social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.contact .contact-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  color: #504e70;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.contact .contact-social a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact .contact-note {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  border-left: 4px solid;
+}
+
+.contact .contact-note p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #504e70;
+  margin-bottom: 15px;
+}
+
+.contact .contact-note strong {
+  color: #302e4d;
+  font-weight: 600;
+}
+
 /* ABout Section */
 
 .about .about-content {
@@ -1335,6 +1721,132 @@ body.dark .home .cv-link-home .btn-home:hover {
   background-color: #e9e9e9;
   color: #000000;
 }
+
+/* Dark Mode - Research Section */
+body.dark .research .research-intro p,
+body.dark .research .research-area-item p,
+body.dark .research .research-skills h3,
+body.dark .research .skill-item-research h5 {
+  color: #f0f0f0;
+}
+
+body.dark .research .research-area-item h3 {
+  color: #ffffff;
+}
+
+body.dark .research .research-area-item {
+  background-color: #393939;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+body.dark .research .research-area-item:hover {
+  background-color: #4a4a4a;
+}
+
+/* Dark Mode - Talks Section */
+body.dark .talks .talk-item {
+  background-color: #393939;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+body.dark .talks .talk-header h3,
+body.dark .talks .talk-venue {
+  color: #ffffff;
+}
+
+body.dark .talks .talk-type,
+body.dark .talks .talk-details p,
+body.dark .talks .talk-description,
+body.dark .talks .more-talks {
+  color: #f0f0f0;
+}
+
+body.dark .talks .talk-type {
+  background-color: #4a4a4a;
+}
+
+/* Dark Mode - Teaching Section */
+body.dark .teaching .teaching-item {
+  background-color: #393939;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+body.dark .teaching .teaching-item h3 {
+  color: #ffffff;
+}
+
+body.dark .teaching .teaching-item p {
+  color: #f0f0f0;
+}
+
+body.dark .teaching .teaching-item:hover {
+  background-color: #4a4a4a;
+}
+
+/* Dark Mode - News Section */
+body.dark .news .news-item {
+  background-color: #393939;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+body.dark .news .news-date {
+  background-color: #4a4a4a;
+}
+
+body.dark .news .news-date .month {
+  color: #ffffff;
+}
+
+body.dark .news .news-date .year,
+body.dark .news .news-body p {
+  color: #f0f0f0;
+}
+
+body.dark .news .news-body h3 {
+  color: #ffffff;
+}
+
+/* Dark Mode - Contact Section */
+body.dark .contact .contact-intro p,
+body.dark .contact .contact-info-item p,
+body.dark .contact .contact-note p {
+  color: #f0f0f0;
+}
+
+body.dark .contact .contact-info-item {
+  background-color: #393939;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+body.dark .contact .contact-info-item:hover {
+  background-color: #4a4a4a;
+}
+
+body.dark .contact .contact-info-item h3 {
+  color: #ffffff;
+}
+
+body.dark .contact .contact-info-item a {
+  color: #f0f0f0;
+}
+
+body.dark .contact .contact-social a {
+  background-color: #4a4a4a;
+  color: #ffffff;
+}
+
+body.dark .contact .contact-social a:hover {
+  background-color: #555;
+}
+
+body.dark .contact .contact-note {
+  background-color: rgba(80, 80, 80, 0.3);
+}
+
+body.dark .contact .contact-note strong {
+  color: #ffffff;
+}
+
 body.dark .aside,
 body.dark .contact .contact-form .form-item .form-control,
 body.dark .blog .blog-item-inner,
