@@ -1291,40 +1291,49 @@ body.dark .home .research-vision p,
 body.dark .home .research-vision ul li,
 body.dark .home .personal-note p,
 body.dark .home .cv-link-home .cv-date {
-  color: #e9e9e9;
+  color: #f0f0f0;
 }
 
 body.dark .home .section-title-home h2,
-body.dark .home .research-vision h3,
+body.dark .home .research-vision h3 {
+  color: #ffffff;
+}
+
 body.dark .home .intro-text strong,
-body.dark .home .research-vision ul li strong {
-  color: #fff;
+body.dark .home .research-vision ul li strong,
+body.dark .home .research-vision strong {
+  color: #ffffff;
+  font-weight: 700;
 }
 
 body.dark .home .intro .academic-links a {
   background-color: #393939;
-  color: #e9e9e9;
+  color: #ffffff;
+  border: 1px solid #555;
 }
 
 body.dark .home .intro .academic-links a:hover {
   background-color: #4a4a4a;
+  color: #ffffff;
 }
 
 body.dark .home .research-vision {
-  background-color: rgba(57, 57, 57, 0.3);
+  background-color: rgba(80, 80, 80, 0.3);
+  border-left-color: #e9e9e9;
 }
 
 body.dark .home .personal-note {
-  background-color: rgba(57, 57, 57, 0.2);
+  background-color: rgba(80, 80, 80, 0.25);
 }
 
 body.dark .home .cv-link-home .btn-home {
-  background-color: #e9e9e9;
+  background-color: #ffffff;
   color: #151515;
 }
 
 body.dark .home .cv-link-home .btn-home:hover {
-  background-color: #fff;
+  background-color: #e9e9e9;
+  color: #000000;
 }
 body.dark .aside,
 body.dark .contact .contact-form .form-item .form-control,
