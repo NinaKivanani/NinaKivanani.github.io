@@ -2,8 +2,8 @@ title: Nina Hosseini-Kivanani
 description: Personal website showcasing research in NLP, Computer Vision, and Multilingual Speech Recognition
 author: Nina Hosseini-Kivanani
 email: hkivanani@gmail.com
-baseurl: "" # Leave empty if using a custom domain, or use "/personal-webpage" if using GitHub Pages with repository name
-url: "" # Your GitHub Pages URL will be: https://YOUR-USERNAME.github.io
+baseurl: "/NinaKivanani"
+url: "https://ninahkivanani.github.io"
 
 # GitHub Pages configuration
 theme: jekyll-theme-minimal

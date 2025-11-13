@@ -15,7 +15,7 @@
 1. Go to [github.com](https://github.com) and log in
 2. Click the **"+"** button (top-right) → **"New repository"**
 3. Repository settings:
-   - **Name**: `personal-webpage` (or your preferred name)
+   - **Name**: `NinaKivanani` (already done!)
    - **Visibility**: ✅ Public
    - ❌ DO NOT initialize with README
 4. Click **"Create repository"**
@@ -37,8 +37,8 @@ git add .
 # 4. Commit your changes
 git commit -m "Initial commit: Personal website ready for deployment"
 
-# 5. Add GitHub as remote (REPLACE YOUR-USERNAME with your actual GitHub username)
-git remote add origin https://github.com/YOUR-USERNAME/personal-webpage.git
+# 5. Add GitHub as remote (already configured!)
+git remote add origin https://github.com/NinaHKivanani/NinaKivanani.git
 
 # 6. Ensure you're on main branch
 git branch -M main
@@ -53,7 +53,7 @@ git push -u origin main
 
 ### 3. Enable GitHub Pages
 
-1. Go to your repository: `https://github.com/YOUR-USERNAME/personal-webpage`
+1. Go to your repository: `https://github.com/NinaHKivanani/NinaKivanani`
 2. Click **"Settings"** (top menu bar)
 3. Scroll down and click **"Pages"** (left sidebar)
 4. Under **"Build and deployment"**:
@@ -67,7 +67,7 @@ git push -u origin main
 
 Your website will be live at:
 ```
-https://YOUR-USERNAME.github.io/personal-webpage/
+https://ninahkivanani.github.io/NinaKivanani/
 ```
 
 🎉 **Done! Your website is now public!**

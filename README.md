@@ -6,7 +6,7 @@
 
 ## 🌐 Live Website
 
-Once deployed, your website will be available at: `https://YOUR-USERNAME.github.io/personal-webpage/`
+Once deployed, your website will be available at: `https://ninahkivanani.github.io/NinaKivanani/`
 
 ---
 
@@ -49,7 +49,7 @@ If you don't have one already:
 1. Log in to GitHub
 2. Click the **"+"** icon in the top-right corner → Select **"New repository"**
 3. Fill in the details:
-   - **Repository name**: `personal-webpage` (or any name you prefer)
+   - **Repository name**: `NinaKivanani` (already done!)
    - **Description**: "My personal academic website"
    - **Visibility**: Choose **Public**
    - ❌ **DO NOT** check "Add a README file" (you already have one)
@@ -72,9 +72,8 @@ git add .
 # Commit your files
 git commit -m "Initial commit: Personal website"
 
-# Add your GitHub repository as remote
-# Replace YOUR-USERNAME with your actual GitHub username
-git remote add origin https://github.com/YOUR-USERNAME/personal-webpage.git
+# Add your GitHub repository as remote (already configured!)
+git remote add origin https://github.com/NinaHKivanani/NinaKivanani.git
 
 # Push to GitHub
 git push -u origin main
@@ -88,7 +87,7 @@ git push -u origin main
 
 ### Step 4: Enable GitHub Pages
 
-1. Go to your repository on GitHub: `https://github.com/YOUR-USERNAME/personal-webpage`
+1. Go to your repository on GitHub: `https://github.com/NinaHKivanani/NinaKivanani`
 2. Click on **"Settings"** (top menu)
 3. In the left sidebar, click **"Pages"**
 4. Under **"Source"**, select:
@@ -96,7 +95,7 @@ git push -u origin main
    - **Folder**: `/ (root)`
 5. Click **"Save"**
 6. Wait 1-2 minutes, then refresh the page
-7. You'll see a message: **"Your site is live at https://YOUR-USERNAME.github.io/personal-webpage/"**
+7. You'll see a message: **"Your site is live at https://ninahkivanani.github.io/NinaKivanani/"**
 
 🎉 **Congratulations!** Your website is now live!
 

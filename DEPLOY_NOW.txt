@@ -36,10 +36,10 @@ git push
 📍 Step 6: Visit your live website!
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Open your browser and go to:
-https://Nina.H-Kivanani.github.io/
+https://ninahkivanani.github.io/NinaKivanani/
 
 or check your actual GitHub Pages URL in:
-https://github.com/YOUR-USERNAME/YOUR-REPO/settings/pages
+https://github.com/NinaHKivanani/NinaKivanani/settings/pages
 
 
 ═══════════════════════════════════════════════════════════
