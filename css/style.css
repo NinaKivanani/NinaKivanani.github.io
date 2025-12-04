@@ -504,6 +504,28 @@ select {
   font-weight: 700;
   color: #302e4d;
   margin-bottom: 20px;
+  margin-top: 30px;
+  font-family: "Rubik", sans-serif;
+}
+
+.home .research-vision h3:first-child {
+  margin-top: 0;
+}
+
+.home .research-vision h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #302e4d;
+  margin-top: 25px;
+  margin-bottom: 12px;
+  font-family: "Rubik", sans-serif;
+}
+
+.home .personal-note h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #302e4d;
+  margin-bottom: 20px;
   font-family: "Rubik", sans-serif;
 }
 
@@ -1707,13 +1729,19 @@ body.dark .home .cv-link-home .cv-date {
 }
 
 body.dark .home .section-title-home h2,
-body.dark .home .research-vision h3 {
+body.dark .home .research-vision h3,
+body.dark .home .personal-note h3 {
   color: #ffffff;
+}
+
+body.dark .home .research-vision h4 {
+  color: #f0f0f0;
 }
 
 body.dark .home .intro-text strong,
 body.dark .home .research-vision ul li strong,
-body.dark .home .research-vision strong {
+body.dark .home .research-vision strong,
+body.dark .home .research-vision p strong {
   color: #ffffff;
   font-weight: 700;
 }
