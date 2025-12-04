@@ -2231,23 +2231,25 @@ body.dark .shadow-dark {
 
 /* Dark theme styles */
 body.dark .publication-year-header {
-    border-bottom-color: #555;
+    border-bottom-color: #666;
 }
 
 body.dark .publication-year-header h3 {
     color: #ffffff;
+    font-weight: 700;
 }
 
 body.dark .publications-list .publication-title h4 {
     color: #ffffff;
+    font-weight: 600;
 }
 
 body.dark .publications-list .publication-authors {
-    color: #e9e9e9;
+    color: #f0f0f0;
 }
 
 body.dark .publications-list .publication-venue {
-    color: #e9e9e9;
+    color: #e5e5e5;
 }
 
 .publication-links {
