@@ -2183,6 +2183,25 @@ body.dark .shadow-dark {
     width: 100%;
 }
 
+.publication-year-header {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #e0e0e0;
+}
+
+.publication-year-header:first-of-type {
+    margin-top: 0;
+}
+
+.publication-year-header h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #302e4d;
+    font-family: "Rubik", sans-serif;
+    margin: 0;
+}
+
 .publication-item {
     margin-bottom: 30px;
     padding-bottom: 20px;
@@ -2211,6 +2230,14 @@ body.dark .shadow-dark {
 }
 
 /* Dark theme styles */
+body.dark .publication-year-header {
+    border-bottom-color: #555;
+}
+
+body.dark .publication-year-header h3 {
+    color: #ffffff;
+}
+
 body.dark .publications-list .publication-title h4 {
     color: #ffffff;
 }
