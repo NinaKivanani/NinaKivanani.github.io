@@ -2073,8 +2073,7 @@ body.dark .blog .blog-item-inner,
 body.dark .portfolio .portfolio-item-inner,
 body.dark .service .service-item .service-item-inner,
 body.dark .about .about-content .timeline,
-body.dark .about .about-content .personal-info .info-item p,
-body.dark .aside .nav li a {
+body.dark .about .about-content .personal-info .info-item p {
   border-color: #393939;
 }
 body.dark .contact .contact-form .form-item input::placeholder,
