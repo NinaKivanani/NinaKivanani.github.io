@@ -3511,3 +3511,74 @@ body.dark .project-text .link-btn {
     margin-bottom: 14px;
   }
 }
+
+/* =============================================
+   SUBSECTION HEADINGS (within merged sections)
+   ============================================= */
+.subsection-heading {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-black-900);
+  font-family: "Rubik", sans-serif;
+  margin: 0 0 28px 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subsection-heading .fa {
+  color: var(--skin-color);
+  font-size: 20px;
+}
+
+/* teaching-body wrapper inside teaching-item */
+.teaching .teaching-item .teaching-body {
+  flex: 1;
+}
+
+.teaching .teaching-item .teaching-body h3 {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text-black-900);
+  margin-bottom: 10px;
+  font-family: "Rubik", sans-serif;
+}
+
+.teaching .teaching-item .teaching-body p {
+  font-size: 15px;
+  line-height: 26px;
+  color: var(--text-black-700);
+  margin: 0 0 6px 0;
+}
+
+/* =============================================
+   RESPONSIVE CLAMP PADDING — bigger on desktop,
+   safe on mobile, no layout break
+   ============================================= */
+.publication-item,
+.talk-item,
+.teaching .teaching-item,
+.news .news-item {
+  padding: clamp(18px, 3.5vw, 42px) clamp(20px, 4vw, 46px);
+}
+
+/* Keep news item flex gap responsive too */
+.news .news-item {
+  gap: clamp(16px, 3vw, 32px);
+}
+
+/* Subsection heading dark mode */
+body.dark .subsection-heading {
+  color: var(--text-black-900);
+  border-bottom-color: var(--border-color);
+}
+
+body.dark .teaching .teaching-item .teaching-body h3 {
+  color: var(--text-black-900);
+}
+
+body.dark .teaching .teaching-item .teaching-body p {
+  color: var(--text-black-700);
+}
