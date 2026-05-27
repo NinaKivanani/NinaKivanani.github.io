@@ -41,6 +41,38 @@ body {
 ::after {
   box-sizing: border-box;
 }
+
+/* =============================================
+   CSS VARIABLES — light mode defaults
+   ============================================= */
+:root {
+  --skin-color: #2196f3;
+  --skin-color-dark: #1769aa;
+  --bg-black-900: #f2f2fc;
+  --bg-black-100: #fdf9ff;
+  --bg-black-50: #ece8f5;
+  --text-black-900: #302e4d;
+  --text-black-700: #504e70;
+  --text-black-600: #6b6988;
+  --card-bg: #ffffff;
+  --card-shadow: 0 4px 18px rgba(48, 46, 77, 0.09);
+  --card-hover-shadow: 0 8px 28px rgba(48, 46, 77, 0.16);
+  --border-color: #e4e0f0;
+  --accent-border: 4px solid var(--skin-color);
+}
+
+body.dark {
+  --bg-black-900: #151515;
+  --bg-black-100: #1e1e1e;
+  --bg-black-50: #2a2a2a;
+  --text-black-900: #ffffff;
+  --text-black-700: #ececec;
+  --text-black-600: #cccccc;
+  --card-bg: #272727;
+  --card-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+  --card-hover-shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
+  --border-color: #3a3a3a;
+}
 input,
 textarea,
 select {
@@ -631,16 +663,17 @@ select {
 }
 
 .research .research-area-item {
-  padding: 30px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
+  padding: 32px 30px;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  border-top: 4px solid var(--skin-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .research .research-area-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: var(--card-hover-shadow);
 }
 
 .research .research-icon {
@@ -650,17 +683,17 @@ select {
 }
 
 .research .research-area-item h3 {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 700;
-  color: #302e4d;
-  margin-bottom: 15px;
+  color: var(--text-black-900);
+  margin-bottom: 12px;
   font-family: "Rubik", sans-serif;
 }
 
 .research .research-area-item p {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 26px;
-  color: #504e70;
+  color: var(--text-black-700);
 }
 
 .research .research-skills {
@@ -701,16 +734,18 @@ select {
 }
 
 .talks .talk-item {
-  padding: 30px;
-  margin-bottom: 30px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
+  padding: 32px 36px;
+  margin-bottom: 28px;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  border-left: 4px solid var(--skin-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .talks .talk-item:hover {
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transform: translateY(-3px);
+  box-shadow: var(--card-hover-shadow);
 }
 
 .talks .talk-header {
@@ -723,12 +758,13 @@ select {
 }
 
 .talks .talk-header h3 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
-  color: #302e4d;
+  color: var(--text-black-900);
   margin: 0;
   flex: 1;
   min-width: 250px;
+  line-height: 1.4;
 }
 
 .talks .talk-type {
@@ -746,8 +782,8 @@ select {
 }
 
 .talks .talk-details p {
-  font-size: 15px;
-  color: #504e70;
+  font-size: 14px;
+  color: var(--text-black-600);
   margin: 5px 0;
 }
 
@@ -756,10 +792,10 @@ select {
 }
 
 .talks .talk-description {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 26px;
-  color: #504e70;
-  margin-top: 15px;
+  color: var(--text-black-700);
+  margin-top: 14px;
 }
 
 .talks .talk-links {
@@ -808,17 +844,18 @@ select {
 .teaching .teaching-item {
   display: flex;
   align-items: flex-start;
-  padding: 30px;
-  margin-bottom: 25px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
+  padding: 32px 36px;
+  margin-bottom: 24px;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  border-left: 4px solid var(--skin-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .teaching .teaching-item:hover {
-  transform: translateX(10px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transform: translateY(-3px);
+  box-shadow: var(--card-hover-shadow);
 }
 
 .teaching .teaching-icon {
@@ -829,31 +866,31 @@ select {
 }
 
 .teaching .teaching-item h3 {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 700;
-  color: #302e4d;
-  margin-bottom: 10px;
+  color: var(--text-black-900);
+  margin-bottom: 12px;
   font-family: "Rubik", sans-serif;
 }
 
 .teaching .teaching-item p {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 26px;
-  color: #504e70;
+  color: var(--text-black-700);
   margin: 0 0 6px 0;
 }
 
 .teaching .teaching-list {
   list-style: disc;
   padding-left: 20px;
-  margin: 8px 0 0 0;
+  margin: 10px 0 0 0;
 }
 
 .teaching .teaching-list li {
   font-size: 15px;
   line-height: 26px;
-  color: #504e70;
-  margin-bottom: 6px;
+  color: var(--text-black-700);
+  margin-bottom: 7px;
 }
 
 /* News Section */
@@ -865,46 +902,46 @@ select {
 
 .news .news-item {
   display: flex;
-  gap: 35px;
-  padding: 35px 40px;
-  margin-bottom: 30px;
-  background-color: #fff;
+  gap: 30px;
+  padding: 32px 36px;
+  margin-bottom: 22px;
+  background-color: var(--card-bg);
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-  border-left: 4px solid transparent;
+  box-shadow: var(--card-shadow);
+  border-left: 4px solid var(--skin-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .news .news-item:hover {
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-  transform: translateX(5px);
+  transform: translateY(-3px);
+  box-shadow: var(--card-hover-shadow);
 }
 
 .news .news-date {
-  min-width: 100px;
-  max-width: 100px;
+  min-width: 90px;
+  max-width: 90px;
   text-align: center;
-  padding: 20px 15px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 16px 12px;
+  background: linear-gradient(135deg, #f0eef8 0%, #e4e0f0 100%);
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(48,46,77,0.08);
 }
 
 .news .news-date .month {
   display: block;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
-  color: #302e4d;
+  color: var(--text-black-900);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .news .news-date .year {
   display: block;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
-  color: #504e70;
-  margin-top: 5px;
+  color: var(--text-black-700);
+  margin-top: 4px;
 }
 
 .news .news-body {
@@ -912,18 +949,18 @@ select {
 }
 
 .news .news-body h3 {
-  font-size: 22px;
+  font-size: 19px;
   font-weight: 700;
-  color: #302e4d;
-  margin-bottom: 12px;
+  color: var(--text-black-900);
+  margin-bottom: 10px;
   font-family: "Rubik", sans-serif;
   line-height: 1.4;
 }
 
 .news .news-body p {
-  font-size: 16px;
-  line-height: 28px;
-  color: #504e70;
+  font-size: 15px;
+  line-height: 26px;
+  color: var(--text-black-700);
   margin: 0;
 }
 
@@ -1821,90 +1858,77 @@ body.dark .research .research-intro p,
 body.dark .research .research-area-item p,
 body.dark .research .research-skills h3,
 body.dark .research .skill-item-research h5 {
-  color: #f0f0f0;
+  color: var(--text-black-700);
 }
 
 body.dark .research .research-area-item h3 {
-  color: #ffffff;
+  color: var(--text-black-900);
 }
 
 body.dark .research .research-area-item {
-  background-color: #393939;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-body.dark .research .research-area-item:hover {
-  background-color: #4a4a4a;
+  background-color: var(--card-bg);
+  box-shadow: var(--card-shadow);
 }
 
 /* Dark Mode - Talks Section */
 body.dark .talks .talk-item {
-  background-color: #393939;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  background-color: var(--card-bg);
+  box-shadow: var(--card-shadow);
 }
 
-body.dark .talks .talk-header h3,
+body.dark .talks .talk-header h3 {
+  color: var(--text-black-900);
+}
+
 body.dark .talks .talk-venue {
   color: #ffffff;
 }
 
-body.dark .talks .talk-type,
+body.dark .talks .talk-type {
+  background-color: #3a3a3a;
+  color: #d0d0d0;
+}
+
 body.dark .talks .talk-details p,
 body.dark .talks .talk-description,
 body.dark .talks .more-talks {
-  color: #f0f0f0;
+  color: var(--text-black-700);
 }
 
-body.dark .talks .talk-type {
-  background-color: #4a4a4a;
-}
-
-body.dark .talks .talk-links .link-btn {
-  background-color: #4a4a4a;
-  color: #f0f0f0;
-  border-color: #555;
-}
-
-body.dark .talks .talk-links .link-btn:hover {
-  background-color: #555;
+body.dark .talks .more-talks a {
+  color: #90caf9;
 }
 
 /* Dark Mode - Teaching Section */
 body.dark .teaching .teaching-item {
-  background-color: #393939;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  background-color: var(--card-bg);
+  box-shadow: var(--card-shadow);
 }
 
 body.dark .teaching .teaching-item h3 {
-  color: #ffffff;
+  color: var(--text-black-900);
 }
 
 body.dark .teaching .teaching-item p {
-  color: #f0f0f0;
+  color: var(--text-black-700);
 }
 
-body.dark .teaching .teaching-item:hover {
-  background-color: #4a4a4a;
+body.dark .teaching .teaching-item strong {
+  color: #ffffff;
 }
 
 body.dark .teaching .teaching-list li {
-  color: #f0f0f0;
+  color: var(--text-black-700);
 }
 
 /* Dark Mode - News Section */
 body.dark .news .news-item {
-  background-color: #393939;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-  border-left-color: #666;
-}
-
-body.dark .news .news-item:hover {
-  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-  background-color: #404040;
+  background-color: var(--card-bg);
+  box-shadow: var(--card-shadow);
 }
 
 body.dark .news .news-date {
-  background: linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 100%);
+  background: linear-gradient(135deg, #333 0%, #2a2a2a 100%);
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
@@ -1913,15 +1937,15 @@ body.dark .news .news-date .month {
 }
 
 body.dark .news .news-date .year {
-  color: #d0d0d0;
+  color: #cccccc;
 }
 
 body.dark .news .news-body h3 {
-  color: #ffffff;
+  color: var(--text-black-900);
 }
 
 body.dark .news .news-body p {
-  color: #e5e5e5;
+  color: var(--text-black-700);
 }
 
 /* Dark Mode - Contact Section */
@@ -2176,17 +2200,21 @@ body.dark .shadow-dark {
 }
 
 .bibtex-citation {
-    background-color: var(--bg-black-100);
-    border: 1px solid var(--bg-black-50);
-    border-radius: 4px;
-    padding: 15px;
-    margin-top: 15px;
-    font-family: monospace;
-    font-size: 14px;
+    background-color: #f4f2fb;
+    background-color: var(--bg-black-50);
+    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-top: 14px;
+    font-family: "Courier New", monospace;
+    font-size: 13px;
     white-space: pre-wrap;
     word-wrap: break-word;
-    color: var(--text-black-700);
+    color: #302e4d;
+    color: var(--text-black-900);
     position: relative;
+    line-height: 1.6;
 }
 
 /* Success message animation */
@@ -2201,10 +2229,13 @@ body.dark .shadow-dark {
 }
 
 .publication-year-header {
-    margin-top: 50px;
-    margin-bottom: 30px;
-    padding-bottom: 15px;
-    border-bottom: 3px solid #e0e0e0;
+    margin-top: 52px;
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 3px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 14px;
 }
 
 .publication-year-header:first-of-type {
@@ -2212,61 +2243,54 @@ body.dark .shadow-dark {
 }
 
 .publication-year-header h3 {
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 700;
-    color: #302e4d;
+    color: var(--text-black-900);
     font-family: "Rubik", sans-serif;
     margin: 0;
 }
 
 .publication-item {
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--bg-black-50);
+    margin-bottom: 22px;
+    padding: 24px 28px;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    border-left: 4px solid var(--skin-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.publication-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--card-hover-shadow);
 }
 
 /* Light theme styles */
 .publications-list .publication-title h4 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #302e4d;
-    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    margin-bottom: 8px;
+    line-height: 1.5;
 }
 
 .publications-list .publication-authors {
-    font-size: 15px;
-    color: #504e70;
+    font-size: 14px;
+    color: var(--text-black-700);
     margin-bottom: 5px;
+    line-height: 1.5;
 }
 
 .publications-list .publication-venue {
     font-style: italic;
     font-size: 14px;
-    color: #504e70;
-    margin-bottom: 10px;
+    color: var(--text-black-600);
+    margin-bottom: 12px;
 }
 
 /* Dark theme styles */
 body.dark .publication-year-header {
-    border-bottom-color: #666;
-}
-
-body.dark .publication-year-header h3 {
-    color: #ffffff;
-    font-weight: 700;
-}
-
-body.dark .publications-list .publication-title h4 {
-    color: #ffffff;
-    font-weight: 600;
-}
-
-body.dark .publications-list .publication-authors {
-    color: #f0f0f0;
-}
-
-body.dark .publications-list .publication-venue {
-    color: #e5e5e5;
+    border-bottom-color: #3a3a3a;
 }
 
 .publication-links {
@@ -2275,42 +2299,39 @@ body.dark .publications-list .publication-venue {
 }
 
 .link-btn {
-    font-size: 14px;
-    padding: 4px 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 14px;
+    background-color: #2196f3;
     background-color: var(--skin-color);
-    color: #ffffff;
+    color: #ffffff !important;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     text-decoration: none;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .link-btn:hover {
-    opacity: 0.8;
-}
-
-.bibtex-citation {
-    display: none;
-    margin-top: 10px;
-    padding: 10px;
-    background-color: var(--bg-black-100);
-    border-radius: 4px;
-    font-family: monospace;
-    font-size: 14px;
-    white-space: pre-wrap;
-    color: var(--text-black-900);
+    opacity: 0.85;
+    transform: translateY(-1px);
 }
 
 /* Dark theme for BibTeX */
 body.dark .bibtex-citation {
-    background-color: #393939;
-    color: #ffffff;
+    background-color: #1e1e1e;
+    border-color: #3a3a3a;
+    color: #e8e8e8;
 }
 
-/* Border colors for different themes */
+/* Dark mode publication cards */
 body.dark .publication-item {
-    border-bottom: 1px solid #393939;
+    background-color: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    border-left-color: var(--skin-color);
 }
 
 /* Publication link button icons */
@@ -3085,117 +3106,6 @@ body.dark .news-ticker-items::-webkit-scrollbar-thumb:hover {
   }
 }
 
-/* Detailed LuxVoice Content */
-<div class="portfolio-detailed-item padd-15" data-category="luxvoice">
-  <div class="detailed-content">
-    <div class="detailed-layout">
-      <!-- Left side - Image -->
-      <div class="detailed-image">
-        <img src="images/Project/logo.png" alt="LuxVoice Logo">
-      </div>
-      
-      <!-- Right side - Content -->
-      <div class="detailed-description">
-        <h3>LuxVoice</h3>
-        <p class="tagline">Bringing Luxembourgish to Life Through Speech</p>
-        
-        <div class="project-summary">
-          <p>LuxVoice is a groundbreaking speech technology project focused on the Luxembourgish language. Through advanced machine learning and linguistic analysis, we're creating the first comprehensive speech synthesis and recognition system for Luxembourgish.</p>
-        </div>
-        
-        <div class="project-highlights">
-          <h4>Project Highlights</h4>
-          <ul>
-            <li><span class="highlight-label">Started:</span> 2020</li>
-            <li><span class="highlight-label">Status:</span> Active Development</li>
-            <li><span class="highlight-label">Team Size:</span> 8 Researchers</li>
-            <li><span class="highlight-label">Collaborators:</span> University of Luxembourg, Ministry of Culture</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Show/Hide Toggle Button -->
-    <div class="show-hide-container">
-      <button class="show-hide-btn" onclick="toggleLuxVoiceDetails()">
-        Show More Details <i class="fa fa-chevron-down"></i>
-      </button>
-    </div>
-
-    <!-- Collapsible Full Project Description -->
-    <div id="luxvoice-full-details" class="full-project-description" style="display: none;">
-      <h3>Detailed Project Information</h3>
-      
-      <div class="description-section">
-        <h4>Project Background</h4>
-        <p>Luxembourgish (Lëtzebuergesch) is spoken by approximately 400,000 people, primarily in Luxembourg. Despite its official language status, it has limited digital presence and lacks modern speech technology resources. LuxVoice was initiated to bridge this technological gap and ensure Luxembourgish remains viable in our increasingly digital world.</p>
-      </div>
-      
-      <div class="description-section">
-        <h4>Technical Approach</h4>
-        <p>Our research employs cutting-edge techniques in speech technology:</p>
-        <ul>
-          <li><strong>Acoustic Modeling:</strong> We've developed specialized neural network architectures that capture the unique phonetic properties of Luxembourgish.</li>
-          <li><strong>Language Modeling:</strong> Custom language models account for the unique grammatical structures and vocabulary of Luxembourgish.</li>
-          <li><strong>Transfer Learning:</strong> We leverage knowledge from resource-rich languages to improve performance on Luxembourgish.</li>
-          <li><strong>Data Collection:</strong> We've built the largest corpus of recorded Luxembourgish speech, capturing regional variations and dialects.</li>
-        </ul>
-      </div>
-      
-      <div class="description-section">
-        <h4>Current Achievements</h4>
-        <p>The LuxVoice project has reached several significant milestones:</p>
-        <ul>
-          <li>Created the first neural text-to-speech system for Luxembourgish</li>
-          <li>Developed a speech recognition system with 87% accuracy</li>
-          <li>Published the LuxSpeech dataset featuring 200+ hours of recorded speech</li>
-          <li>Released an open API for developers to integrate Luxembourgish speech technology</li>
-          <li>Launched a public demonstration website visited by 15,000+ users</li>
-        </ul>
-      </div>
-      
-      <div class="description-section">
-        <h4>Applications & Impact</h4>
-        <p>LuxVoice technology is being applied in several domains:</p>
-        <ul>
-          <li><strong>Education:</strong> Language learning applications for preserving and teaching Luxembourgish</li>
-          <li><strong>Accessibility:</strong> Screen readers and digital assistants for visually impaired Luxembourgish speakers</li>
-          <li><strong>Cultural Heritage:</strong> Digitization and preservation of oral histories and cultural expressions</li>
-          <li><strong>Government Services:</strong> Voice-enabled public information systems in Luxembourgish</li>
-        </ul>
-      </div>
-      
-      <div class="description-section">
-        <h4>Future Directions</h4>
-        <p>Our ongoing research focuses on:</p>
-        <ul>
-          <li>Emotion and expression modeling in Luxembourgish speech</li>
-          <li>Cross-dialect adaptation techniques</li>
-          <li>Low-resource voice conversion</li>
-          <li>Integration with augmented reality applications</li>
-          <li>Expanding to related Moselle Franconian dialects</li>
-        </ul>
-      </div>
-      
-      <div class="description-section">
-        <h4>Publications</h4>
-        <ul class="publications-list">
-          <li>Schmit, A., et al. (2022). "Neural Speech Synthesis for Luxembourgish: Challenges and Approaches." <em>Proceedings of INTERSPEECH 2022</em>, 1876-1880.</li>
-          <li>Weber, L., et al. (2021). "LuxSpeech: A Corpus for Luxembourgish Automatic Speech Recognition." <em>Language Resources and Evaluation</em>, 55(3), 511-528.</li>
-          <li>Müller, C., et al. (2020). "Phonological Considerations in Automatic Speech Recognition for Low-Resource Languages: The Luxembourgish Case Study." <em>Journal of Computational Linguistics</em>, 46(2), 329-354.</li>
-        </ul>
-      </div>
-    </div>
-    
-    <!-- Project Navigation -->
-    <div class="project-navigation">
-      <a href="#" class="back-to-all" data-filter="all">
-        <i class="fa fa-th"></i> All Projects
-      </a>
-      <a href="#" class="next-project" data-filter="gloria">
-        Next: GLORIA <i class="fa fa-arrow-right"></i>
-      </a>
-    </div>
   </div>
 </div>
 
@@ -3483,4 +3393,121 @@ body.dark .news-ticker-items::-webkit-scrollbar-thumb:hover {
 
 .portfolio-item:hover {
   transform: translateY(-5px);
+}
+
+/* =============================================
+   POLISH — scholar link, icon colours, misc
+   ============================================= */
+
+/* Scholar / Google Scholar link in publications */
+.scholar-link {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.scholar-link .link-btn {
+  font-size: 15px;
+  padding: 10px 24px;
+  border-radius: 30px;
+}
+
+/* Research section icon colours inherit skin */
+.research .research-icon .fa,
+.teaching .teaching-icon .fa {
+  color: #2196f3;
+  color: var(--skin-color);
+}
+
+/* Section title underline bars inherit skin */
+.section-title h2::before,
+.section-title h2::after {
+  background-color: #2196f3;
+  background-color: var(--skin-color);
+}
+
+/* Make section-title text readable in dark mode */
+body.dark .section-title h2 {
+  color: #ffffff;
+}
+
+/* Publication links area spacing */
+.publication-links {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Teaching icon size */
+.teaching .teaching-icon {
+  font-size: 32px;
+  margin-right: 22px;
+  min-width: 50px;
+  text-align: center;
+  margin-top: 4px;
+}
+
+/* Improve talk-type badge */
+.talks .talk-type {
+  white-space: nowrap;
+}
+
+/* Section bg in dark mode - ensure all card sections use var */
+body.dark .section {
+  background-color: #151515;
+  background-color: var(--bg-black-900);
+}
+
+/* Project details text in dark mode */
+body.dark .project-text h3 {
+  color: #2196f3;
+  color: var(--skin-color);
+}
+
+body.dark .project-text p {
+  color: var(--text-black-700);
+}
+
+body.dark .project-text .link-btn {
+  color: #ffffff !important;
+}
+
+/* Responsive tweaks for the new card layout */
+@media (max-width: 767px) {
+  .news .news-item {
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 20px;
+  }
+
+  .news .news-date {
+    min-width: auto;
+    max-width: none;
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .news .news-date .month,
+  .news .news-date .year {
+    display: inline;
+    font-size: 16px;
+  }
+
+  .talks .talk-item,
+  .teaching .teaching-item,
+  .publication-item {
+    padding: 20px 18px;
+  }
+
+  .teaching .teaching-item {
+    flex-direction: column;
+  }
+
+  .teaching .teaching-icon {
+    margin-right: 0;
+    margin-bottom: 14px;
+  }
 }
