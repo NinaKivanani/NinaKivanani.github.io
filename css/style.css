@@ -840,7 +840,20 @@ select {
   font-size: 16px;
   line-height: 26px;
   color: #504e70;
-  margin: 0;
+  margin: 0 0 6px 0;
+}
+
+.teaching .teaching-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 8px 0 0 0;
+}
+
+.teaching .teaching-list li {
+  font-size: 15px;
+  line-height: 26px;
+  color: #504e70;
+  margin-bottom: 6px;
 }
 
 /* News Section */
@@ -1872,6 +1885,10 @@ body.dark .teaching .teaching-item p {
 
 body.dark .teaching .teaching-item:hover {
   background-color: #4a4a4a;
+}
+
+body.dark .teaching .teaching-list li {
+  color: #f0f0f0;
 }
 
 /* Dark Mode - News Section */
