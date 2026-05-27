@@ -1870,55 +1870,58 @@ body.dark .research .research-area-item {
   box-shadow: var(--card-shadow);
 }
 
-/* Dark Mode - Talks Section */
-body.dark .talks .talk-item {
+/* Dark Mode - Talk & Teaching cards (parent-agnostic) */
+body.dark .talk-item {
   background-color: var(--card-bg);
   box-shadow: var(--card-shadow);
 }
 
-body.dark .talks .talk-header h3 {
+body.dark .talk-header h3 {
   color: var(--text-black-900);
 }
 
-body.dark .talks .talk-venue {
+body.dark .talk-venue {
   color: #ffffff;
 }
 
-body.dark .talks .talk-type {
+body.dark .talk-type {
   background-color: #3a3a3a;
   color: #d0d0d0;
 }
 
-body.dark .talks .talk-details p,
-body.dark .talks .talk-description,
-body.dark .talks .more-talks {
+body.dark .talk-details p,
+body.dark .talk-description,
+body.dark .more-talks {
   color: var(--text-black-700);
 }
 
-body.dark .talks .more-talks a {
+body.dark .more-talks a {
   color: #90caf9;
 }
 
-/* Dark Mode - Teaching Section */
-body.dark .teaching .teaching-item {
+body.dark .teaching-item {
   background-color: var(--card-bg);
   box-shadow: var(--card-shadow);
 }
 
-body.dark .teaching .teaching-item h3 {
+body.dark .teaching-item h3 {
   color: var(--text-black-900);
 }
 
-body.dark .teaching .teaching-item p {
+body.dark .teaching-item p {
   color: var(--text-black-700);
 }
 
-body.dark .teaching .teaching-item strong {
+body.dark .teaching-item strong {
   color: #ffffff;
 }
 
-body.dark .teaching .teaching-list li {
+body.dark .teaching-list li {
   color: var(--text-black-700);
+}
+
+body.dark .teaching-icon .fa {
+  color: var(--skin-color);
 }
 
 /* Dark Mode - News Section */
@@ -2005,9 +2008,6 @@ body.dark .section-title h2 {
 }
 
 body.dark .research .research-icon,
-body.dark .talks .talk-item,
-body.dark .teaching .teaching-icon,
-body.dark .news .news-item,
 body.dark .contact .contact-icon {
   color: #ffffff;
 }
@@ -3575,10 +3575,18 @@ body.dark .subsection-heading {
   border-bottom-color: var(--border-color);
 }
 
-body.dark .teaching .teaching-item .teaching-body h3 {
+body.dark .teaching-item .teaching-body h3 {
   color: var(--text-black-900);
 }
 
-body.dark .teaching .teaching-item .teaching-body p {
+body.dark .teaching-item .teaching-body p {
+  color: var(--text-black-700);
+}
+
+body.dark .teaching-item .teaching-body strong {
+  color: #ffffff;
+}
+
+body.dark .teaching-item .teaching-body .teaching-list li {
   color: var(--text-black-700);
 }
