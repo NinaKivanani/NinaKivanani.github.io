@@ -3460,6 +3460,48 @@ body.dark .news-ticker-items::-webkit-scrollbar-thumb:hover {
   border-radius: 30px;
 }
 
+/* Publication profile links (Scholar / ResearchGate / ORCiD) */
+.pub-profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 44px;
+  align-items: center;
+}
+
+.pub-profile-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border: 2px solid var(--skin-color);
+  color: var(--skin-color);
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  background-color: transparent;
+  letter-spacing: 0.2px;
+}
+
+.pub-profile-btn:hover {
+  background-color: var(--skin-color);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.14);
+}
+
+body.dark .pub-profile-btn {
+  color: var(--skin-color);
+  border-color: var(--skin-color);
+}
+
+body.dark .pub-profile-btn:hover {
+  background-color: var(--skin-color);
+  color: #fff;
+}
+
 /* Research section icon colours inherit skin */
 .research .research-icon .fa,
 .teaching .teaching-icon .fa {
