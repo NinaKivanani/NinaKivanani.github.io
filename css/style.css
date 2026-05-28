@@ -3461,6 +3461,26 @@ body.dark .news-ticker-items::-webkit-scrollbar-thumb:hover {
   border-radius: 30px;
 }
 
+/* End-of-list full publications note */
+.pub-full-list-note {
+  margin-top: 40px;
+  padding: 24px 28px;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  border-left: 4px solid var(--skin-color);
+  box-shadow: var(--card-shadow);
+}
+
+.pub-full-list-note p {
+  font-size: 15px;
+  color: var(--text-black-700);
+  margin-bottom: 0;
+}
+
+body.dark .pub-full-list-note p {
+  color: var(--text-black-700);
+}
+
 /* Publication profile links (Scholar / ResearchGate / ORCiD) */
 .pub-profile-links {
   display: flex;
