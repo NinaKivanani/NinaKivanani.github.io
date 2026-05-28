@@ -848,23 +848,7 @@ select {
 }
 
 .talks .talk-links .link-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  background-color: #f8f9fa;
-  color: #504e70;
-  border-radius: 5px;
-  font-size: 15px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border: 1px solid #e0e0e0;
-}
-
-.talks .talk-links .link-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  font-size: 13px;
 }
 
 .talks .more-talks {
