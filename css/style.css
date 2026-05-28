@@ -1962,6 +1962,23 @@ body.dark .teaching-item p {
   color: var(--text-black-700);
 }
 
+/* Dark mode: make plain links readable inside cards */
+body.dark .publication-item a:not(.link-btn),
+body.dark .talk-item a:not(.link-btn),
+body.dark .teaching-item a:not(.link-btn),
+body.dark .news-item a:not(.link-btn),
+body.dark .teaching-body a:not(.link-btn) {
+  color: var(--skin-color);
+}
+body.dark .publication-item a:not(.link-btn):hover,
+body.dark .talk-item a:not(.link-btn):hover,
+body.dark .teaching-item a:not(.link-btn):hover,
+body.dark .news-item a:not(.link-btn):hover,
+body.dark .teaching-body a:not(.link-btn):hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
 body.dark .teaching-item strong {
   color: #ffffff;
 }
