@@ -4028,56 +4028,39 @@ body.dark .pub-profile-btn {
 }
 
 /* =============================================
-   ALTERNATING SECTION BACKGROUNDS
-   Light mode: pure white panels
-   Dark mode:  slightly elevated surface (#1e1e1e)
+   CONTENT PANEL — white card on darker section bg
+   Creates Bereket-style contrast within a single
+   section view (dark intro → white content body)
    ============================================= */
-.section-alt {
+.content-panel {
   background-color: #ffffff;
+  border-radius: 14px;
+  padding: 36px 40px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 
-/* Cards and items inside alt sections need their own shadow
-   since they sit on white — keep them visible */
-.section-alt .publication-item,
-.section-alt .talk-item,
-.section-alt .teaching-item,
-.section-alt .news-item,
-.section-alt .research-direction-card,
-.section-alt .project-card,
-.section-alt .role-item,
-.section-alt .activity-list li,
-.section-alt .pub-full-list-note,
-.section-alt .contact-info-item,
-.section-alt .contact-note,
-.section-alt .career-highlights,
-.section-alt .research-vision,
-.section-alt .personal-note {
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-}
+/* In light mode the section bg is #f2f2fc; white panel pops */
 
-/* Dark mode alt sections: slightly lighter than the base */
-body.dark .section-alt {
+/* Dark mode: elevate the panel above the #151515 section bg */
+body.dark .content-panel {
   background-color: #1e1e1e;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.45);
 }
 
-body.dark .section-alt .publication-item,
-body.dark .section-alt .talk-item,
-body.dark .section-alt .teaching-item,
-body.dark .section-alt .news-item,
-body.dark .section-alt .research-direction-card,
-body.dark .section-alt .project-card,
-body.dark .section-alt .role-item,
-body.dark .section-alt .activity-list li,
-body.dark .section-alt .pub-full-list-note,
-body.dark .section-alt .contact-info-item,
-body.dark .section-alt .contact-note {
-  background-color: #272727;
-  box-shadow: 0 2px 14px rgba(0,0,0,0.35);
+/* Items inside a content-panel inherit the panel bg, not the dark bg */
+.content-panel .career-highlights,
+.content-panel .research-vision,
+.content-panel .personal-note {
+  background-color: transparent;
+  box-shadow: none;
 }
 
-/* Section title underline stays accent-coloured on white */
-.section-alt .section-title h2 {
-  color: var(--text-black-900);
+/* Connect footer stays on its own with an accent top-border — make it
+   pop against white contact section background if ever needed */
+.connect-footer {
+  background-color: transparent;
 }
 
 /* =============================================
