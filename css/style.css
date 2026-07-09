@@ -3966,6 +3966,34 @@ body.dark .pub-profile-btn {
   text-decoration: underline;
 }
 
+.service-group {
+  margin-bottom: 32px;
+}
+
+.service-group:last-child {
+  margin-bottom: 0;
+}
+
+.service-group-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-black-900);
+  font-family: "Rubik", sans-serif;
+  margin: 0 0 18px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.service-group-title .fa {
+  color: var(--skin-color);
+  font-size: 16px;
+}
+
+body.dark .service-group-title {
+  color: var(--text-black-900);
+}
+
 @media (max-width: 767px) {
   .roles-grid {
     grid-template-columns: 1fr;
