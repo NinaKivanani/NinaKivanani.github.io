@@ -52,8 +52,9 @@
         <ul class="nav">
           <li><a href="#home" class="active"><i class="fa fa-home"></i> Home</a></li>
           <li><a href="#research"><i class="fa fa-flask"></i> Research</a></li>
+          <li><a href="#projects"><i class="fa fa-briefcase"></i> Projects</a></li>
           <li><a href="#publications"><i class="fa fa-file-text"></i> Publications</a></li>
-          <li><a href="#activities"><i class="fa fa-microphone"></i> Speaking & Teaching</a></li>
+          <li><a href="#activities"><i class="fa fa-star"></i> Activities</a></li>
           <li><a href="#cv"><i class="fa fa-id-card-o"></i> Experience & CV</a></li>
           <li><a href="#news"><i class="fa fa-newspaper-o"></i> News</a></li>
           <li><a href="#contact"><i class="fa fa-envelope-o"></i> Contact</a></li>
@@ -192,55 +193,61 @@
       </section>
       <!-- Home section End -->
 
-      <!-- Research & Projects Section -->
+      <!-- Research Section -->
       <section class="research section" id="research">
         <div class="container">
           <div class="row">
             <div class="section-title padd-15">
-              <h2>Research &amp; Projects</h2>
+              <h2>Research</h2>
             </div>
           </div>
 
-          <!-- Research Interests sub-section -->
+          <!-- Active Research Directions -->
           <div class="row">
             <div class="research-content padd-15">
-              <h3 class="subsection-heading"><i class="fa fa-flask"></i> Research Interests</h3>
-              <div class="research-intro">
-                <p>My research focuses on developing inclusive and accessible language technologies, with particular emphasis on underrepresented languages and applications in healthcare diagnostics.</p>
-              </div>
-              
-              <div class="research-areas">
-                <div class="research-area-item">
-                  <div class="research-icon"><i class="fa fa-volume-up"></i></div>
+              <h3 class="subsection-heading"><i class="fa fa-flask"></i> Active Research Directions</h3>
+              <p class="research-tagline">My research develops inclusive, practical AI systems for languages and communities that are underserved by existing technology — combining speech processing, multilingual NLP, and clinical AI.</p>
+              <div class="research-directions-grid">
+
+                <div class="research-direction-card">
+                  <div class="rd-icon"><i class="fa fa-volume-up"></i></div>
                   <h3>Speech Technology for Low-Resource Languages</h3>
-                  <p>Developing high-quality speech synthesis and recognition systems for languages with limited digital resources. Currently leading the LuxVoice project to create an emotionally expressive Text-to-Speech system for Luxembourgish.</p>
+                  <p>I build ASR and TTS systems for languages with limited data, such as Luxembourgish. My work spans transfer learning, data augmentation, and multilingual modeling — currently leading the <strong>LuxVoice</strong> and <strong>LuxASR</strong> initiatives.</p>
                 </div>
-                
-                <div class="research-area-item">
-                  <div class="research-icon"><i class="fa fa-globe"></i></div>
+
+                <div class="research-direction-card">
+                  <div class="rd-icon"><i class="fa fa-heartbeat"></i></div>
+                  <h3>Clinical AI &amp; Neurocognitive Screening</h3>
+                  <p>I design data-efficient machine learning pipelines for early screening of Alzheimer's disease and Parkinson's disease using handwriting, drawing tasks, and speech — combining computer vision, signal processing, and explainable AI.</p>
+                </div>
+
+                <div class="research-direction-card">
+                  <div class="rd-icon"><i class="fa fa-globe"></i></div>
                   <h3>Multilingual &amp; Cross-lingual NLP</h3>
-                  <p>Creating tools and methodologies that work across multiple languages, enabling comparative studies and universal insights into linguistic phenomena and speech patterns.</p>
+                  <p>I study how NLP models generalize across languages, with a focus on low-resource settings, code-switching, sentiment analysis, and the preservation of linguistic diversity in language models and evaluation benchmarks.</p>
                 </div>
-                
-                <div class="research-area-item">
-                  <div class="research-icon"><i class="fa fa-heartbeat"></i></div>
-                  <h3>AI for Healthcare Diagnostics</h3>
-                  <p>Applying speech analysis, drawing analysis, and computer vision to medical diagnostics, particularly for neurodegenerative diseases like Alzheimer's and Parkinson's disease.</p>
-                </div>
-                
-                <div class="research-area-item">
-                  <div class="research-icon"><i class="fa fa-microphone"></i></div>
-                  <h3>Phonetics &amp; Acoustic Analysis</h3>
-                  <p>Conducting detailed acoustic analysis of speech patterns, studying cognitive functions through computational approaches, and investigating cross-language intelligibility.</p>
-                </div>
+
               </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <!-- Research Section End -->
+
+      <!-- Projects Section -->
+      <section class="research section" id="projects">
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>Projects</h2>
             </div>
           </div>
 
           <!-- Projects sub-section -->
-          <div class="row" style="margin-top: 40px;">
+          <div class="row">
             <div class="research-content padd-15">
-              <h3 class="subsection-heading"><i class="fa fa-briefcase"></i> Projects</h3>
+              <h3 class="subsection-heading"><i class="fa fa-briefcase"></i> Selected Projects</h3>
             </div>
           </div>
 
@@ -250,6 +257,7 @@
               <button type="button" class="active" data-filter="all">All</button>
               <button type="button" data-filter="luxvoice">LuxVoice</button>
               <button type="button" data-filter="gloria">GLORIA</button>
+              <button type="button" data-filter="voicetech4teens">VoiceTech4Teens</button>
             </div>
           </div>
           
@@ -268,6 +276,15 @@
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
                   <img src="images/Project/gloria.png" alt="GLORIA Project">
+                  <div class="view-project">View Project</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item padd-15" data-category="voicetech4teens">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <img src="images/Project/voicetech4teens.png" alt="VoiceTech4Teens Project">
                   <div class="view-project">View Project</div>
                 </div>
               </div>
@@ -304,11 +321,25 @@
                 </div>
               </div>
             </div>
+
+            <div class="project-details voicetech4teens-details padd-15" style="display: none;">
+              <div class="project-details-content">
+                <div class="project-image">
+                  <img src="images/Project/voicetech4teens.png" alt="VoiceTech4Teens Project">
+                </div>
+                <div class="project-text">
+                  <h3>VoiceTech4Teens</h3>
+                  <p>VoiceTech4Teens is an educational initiative focused on introducing teenagers to speech and voice technologies through practical, hands-on activities.</p>
+                  <p>The project emphasizes accessible learning, responsible AI use, and real-world examples of speech AI in multilingual and low-resource language contexts.</p>
+                  <button class="back-to-all-btn">Back to All Projects</button>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>
       </section>
-      <!-- Research & Projects Section End -->
+      <!-- Projects Section End -->
 
       <!-- Publications Section -->
       <section class="blog section" id="publications">
@@ -1173,17 +1204,41 @@
       </section>
       <!-- Publications Section End -->
 
-      <!-- Talks & Teaching Section (merged) -->
+      <!-- Activities Section -->
       <section class="talks section" id="activities">
         <div class="container">
           <div class="row">
             <div class="section-title padd-15">
-              <h2>Talks & Teaching</h2>
+              <h2>Activities</h2>
             </div>
           </div>
 
-          <!-- Sub-heading: Talks -->
+          <!-- Active Professional Roles -->
           <div class="row">
+            <div class="talks-content padd-15">
+              <h3 class="subsection-heading"><i class="fa fa-briefcase"></i> Active Professional Roles</h3>
+              <div class="roles-grid">
+                <div class="role-item">
+                  <h4>Postdoctoral Researcher</h4>
+                  <p><a href="https://www.rtl.lu/" target="_blank">RTL Luxembourg</a> &amp; <a href="https://www.uni.lu/" target="_blank">University of Luxembourg</a></p>
+                  <span class="role-date">Sep 2025 – Present</span>
+                </div>
+                <div class="role-item">
+                  <h4>Management Committee Member &amp; Working Group Vice-Chair</h4>
+                  <p>COST Actions: GoodBrother, ENEOLI, UniDive, KGELL</p>
+                  <span class="role-date">2022 – Present</span>
+                </div>
+                <div class="role-item">
+                  <h4>Volunteer</h4>
+                  <p><a href="https://westem.lu/" target="_blank">WeSTEM+</a> — Women in STEM, Luxembourg</p>
+                  <span class="role-date">2024 – Present</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Talks, Panels & Media -->
+          <div class="row" style="margin-top:20px;">
             <div class="talks-content padd-15">
               <span id="talks"></span>
               <h3 class="subsection-heading"><i class="fa fa-microphone"></i> Talks, Panels &amp; Media</h3>
@@ -1298,6 +1353,55 @@
 
             </div>
           </div>
+
+          <!-- Workshop Organization -->
+          <div class="row" style="margin-top:20px;">
+            <div class="talks-content padd-15">
+              <h3 class="subsection-heading"><i class="fa fa-calendar-check-o"></i> Organizing</h3>
+              <ul class="activity-list">
+                <li><a href="https://speakable-2026.github.io/" target="_blank">SPEAKABLE2026 @ LREC2026</a> — Speech Language Models in Low-Resource Settings: Performance, Evaluation, and Bias Analysis · Co-Organizer · 2026</li>
+                <li><a href="https://spelll.org/committee.html" target="_blank">SPELLL 2026</a> — Speech and Language Technologies for Low-Resource Languages · Proceedings Editor · 2026</li>
+                <li><a href="https://sites.google.com/view/teicai2024" target="_blank">TEICAI @ EACL 2024</a> — Towards Ethical &amp; Inclusive Conversational AI · Co-Organizer · Malta, 2024</li>
+                <li>GLORIA — Biomedical Linked Annotation Hackathon 2025 · <a href="https://github.com/NinaHKivanani/GLORIA" target="_blank">Project Lead</a> · Tokyo, Japan</li>
+                <li>BNAIC/BeneLearn 2021 Conference · Website Manager · Luxembourg</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Awards -->
+          <div class="row" style="margin-top:20px;">
+            <div class="talks-content padd-15">
+              <h3 class="subsection-heading"><i class="fa fa-trophy"></i> Awards &amp; Grants</h3>
+              <ul class="activity-list">
+                <li><strong>Best Thesis Award Nomination</strong> — PhD in Computer Science, University of Luxembourg · 2025</li>
+                <li><strong>Best Oral Presentation</strong> — "Ink of Insight", ICMHI 2024 · Japan</li>
+                <li><strong>3rd Place</strong> — Digital Medical Devices Competition, Digital Medical Devices Summer School · Luxembourg / Barcelona · 2024</li>
+                <li><strong>Travel Grant</strong> — Biomedical Linked Annotation Hackathon 9 · Japan · 2025</li>
+                <li><strong>STSM Grant</strong> — Machine Learning Genoa Center (MaLGa Lab) · Italy · 2023</li>
+                <li><strong>DAAD Grant</strong> — Six-Month Master's Thesis Grant · Germany · 2020</li>
+                <li><strong>Travel Grant</strong> — Lisbon Machine Learning School (LxMLS 2020) · Portugal</li>
+                <li><strong>Travel Grant</strong> — AI Summer School PAISS · France · 2019</li>
+                <li><strong>Erasmus Mundus Scholarship</strong> — MSc in Language &amp; Communication Technologies · Netherlands &amp; Italy · 2017–2019</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Academic Service -->
+          <div class="row" style="margin-top:20px;">
+            <div class="talks-content padd-15">
+              <h3 class="subsection-heading"><i class="fa fa-users"></i> Academic Service</h3>
+              <ul class="activity-list">
+                <li><strong>Program Committee</strong> — UniDive Winter School 2025</li>
+                <li><strong>Program Committee</strong> — 2nd International Workshop on Causality, Agents and Large Models (CALM) · 2025</li>
+                <li><strong>Program Committee</strong> — PrivAAL: 2nd GoodBrother Workshop on Privacy-Aware Assistive Technologies · 2024</li>
+                <li><strong>Program Committee</strong> — ACM Conversational User Interfaces (CUI) · 2022</li>
+                <li><strong>Program Committee</strong> — International Graphonomics Society Conference (IGS 2021)</li>
+                <li><strong>Volunteer</strong> — Interspeech 2023 · Dublin</li>
+                <li><strong>Volunteer</strong> — ACL 2019 · Florence</li>
+              </ul>
+            </div>
+          </div>
+
         </div>
       </section>
       <!-- Activities Section End -->
@@ -1656,6 +1760,22 @@
               </div>
             </div>
           </div>
+
+          <!-- Connect Footer -->
+          <div class="row">
+            <div class="connect-footer padd-15">
+              <h3>Connect</h3>
+              <div class="connect-links">
+                <a href="https://www.linkedin.com/in/ninahkivanani/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/NinaKivanani" target="_blank" title="GitHub"><i class="fa fa-github"></i></a>
+                <a href="https://orcid.org/0000-0002-0821-9125" target="_blank" title="ORCID"><i class="fa fa-id-badge"></i></a>
+                <a href="https://twitter.com/Nina_HKivanani" target="_blank" title="Twitter/X"><i class="fa fa-twitter"></i></a>
+                <a href="mailto:nina.hosseinikivanani@ext.uni.lu" title="Email"><i class="fa fa-envelope"></i></a>
+              </div>
+              <p class="connect-copy">&copy; 2026 Nina Hosseini-Kivanani</p>
+            </div>
+          </div>
+
         </div>
       </section>
       <!-- Contact Section End -->
