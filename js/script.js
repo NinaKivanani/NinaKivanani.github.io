@@ -102,7 +102,7 @@ if (lightbox) {
 }
 
 
-// Aside Navbar
+// Aside Navbar — scroll-based navigation
 
 const nav = document.querySelector(".nav"),
     navList = nav.querySelectorAll("li"),
@@ -110,48 +110,43 @@ const nav = document.querySelector(".nav"),
     allSection = document.querySelectorAll(".section"),
     totalSection = allSection.length;
 
+// Click nav link → smooth scroll to section
 for (let i = 0; i < totalNavList; i++) {
     const a = navList[i].querySelector("a");
-    a.addEventListener("click", function () {
-        // remove back section
-        removeBackSectionClass();
-
-        for (let i = 0; i < totalSection; i++) {
-            allSection[i].classList.remove("back-section");
+    a.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").split("#")[1];
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: "smooth" });
         }
-
         for (let j = 0; j < totalNavList; j++) {
-            if (navList[j].querySelector("a").classList.contains("active")) {
-                // add back section
-                addBackSectionClass(j);
-            }
-            navList[j].querySelector("a").classList.remove("active")
+            navList[j].querySelector("a").classList.remove("active");
         }
-        this.classList.add("active")
-        showSection(this);
+        this.classList.add("active");
         if (window.innerWidth < 1200) {
             asideSectionTogglerBtn();
         }
-    })
+    });
 }
 
-function removeBackSectionClass() {
+// Highlight the active nav link as user scrolls
+window.addEventListener("scroll", function () {
+    const scrollPos = window.scrollY + window.innerHeight * 0.35;
     for (let i = 0; i < totalSection; i++) {
-        allSection[i].classList.remove("back-section")
+        const section = allSection[i];
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            const id = section.id;
+            for (let j = 0; j < totalNavList; j++) {
+                const a = navList[j].querySelector("a");
+                a.classList.toggle("active", a.getAttribute("href") === "#" + id);
+            }
+            break;
+        }
     }
-}
-
-function addBackSectionClass(num) {
-    allSection[num].classList.add("back-section");
-}
-
-function showSection(element) {
-    for (let i = 0; i < totalSection; i++) {
-        allSection[i].classList.remove("active");
-    }
-    const target = element.getAttribute("href").split("#")[1];
-    document.querySelector("#" + target).classList.add("active")
-}
+});
 
 function updateNav(element) {
     for (let i = 0; i < totalNavList; i++) {
@@ -163,26 +158,12 @@ function updateNav(element) {
     }
 }
 
-const hireMe = document.querySelector(".hire-me");
-if (hireMe) {
-    hireMe.addEventListener("click", function () {
-        const sectionIndex = this.getAttribute("data-section-index");
-        showSection(this);
-        updateNav(this);
-        removeBackSectionClass();
-        addBackSectionClass(sectionIndex);
-    });
-}
-
 const navTogglerBtn = document.querySelector(".nav-toggler"),
     aside = document.querySelector(".aside");
-navTogglerBtn.addEventListener("click", asideSectionTogglerBtn)
+navTogglerBtn.addEventListener("click", asideSectionTogglerBtn);
 function asideSectionTogglerBtn() {
     aside.classList.toggle("open");
     navTogglerBtn.classList.toggle("open");
-    for (let i = 0; i < totalSection; i++) {
-        allSection[i].classList.toggle("open");
-    }
 }
 
 // Citation copy and toggle function

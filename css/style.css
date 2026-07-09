@@ -82,28 +82,13 @@ select {
   background-color: #f2f2fc;
   min-height: 100vh;
   display: block;
-  padding: 0 30px;
-  position: fixed;
-  left: 270px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-  opacity: 1;
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  padding: 70px 30px 60px;
+  position: relative;
+  overflow: visible;
 }
-.section.back-section {
-  z-index: 1;
-}
-.section.active {
-  z-index: 2;
-  opacity: 1;
-  -webkit-animation: slideSection 1s ease;
-  animation: slideSection 1s ease;
-}
+/* back-section and active no longer needed for scroll layout */
+.section.back-section {}
+.section.active { opacity: 1; }
 @-webkit-keyframes slideSection {
   0% {
     -webkit-transform: translateX(100%);
@@ -2105,18 +2090,8 @@ body.dark .shadow-dark {
   .aside.open {
     left: 0px;
   }
-  .section {
-    left: 0;
-    position: initial;
-  }
-  .section.active {
-    animation: none;
-  }
   .main-content {
     padding: 0;
-  }
-  .section.open {
-    left: 270px;
   }
   .about .about-content .personal-info .info-item p span {
     display: block;
@@ -4028,10 +4003,52 @@ body.dark .pub-profile-btn {
 }
 
 /* =============================================
-   CONTENT PANEL — white card on darker section bg
-   Creates Bereket-style contrast within a single
-   section view (dark intro → white content body)
+   ALTERNATING SECTION BACKGROUNDS
+   Scroll-based layout — dark and white sections
+   stack and are both visible as you scroll,
+   exactly like Bereket's page design.
    ============================================= */
+
+/* Light mode: white sections alternate with #f2f2fc default */
+.section-alt {
+  background-color: #ffffff;
+}
+
+/* Dark mode: slightly elevated surface (#1e1e1e) alternates with #151515 */
+body.dark .section-alt {
+  background-color: #1e1e1e;
+}
+
+/* Cards inside white sections get a subtle shadow instead of a filled bg */
+.section-alt .publication-item,
+.section-alt .teaching-item,
+.section-alt .research-direction-card,
+.section-alt .role-item {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+body.dark .section-alt .publication-item,
+body.dark .section-alt .teaching-item,
+body.dark .section-alt .research-direction-card,
+body.dark .section-alt .role-item {
+  background-color: #272727;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.35);
+}
+
+/* Connect footer — give it a dark accent band so it pops on the
+   white contact section in both light and dark modes */
+.connect-footer {
+  background-color: var(--bg-black-900);
+  border-radius: 12px;
+  padding: 50px 40px 36px;
+  margin-top: 30px;
+}
+
+body.dark .connect-footer {
+  background-color: #151515;
+}
+
+/* Content-panel helper kept as utility (used in home section) */
 .content-panel {
   background-color: #ffffff;
   border-radius: 14px;
@@ -4041,26 +4058,9 @@ body.dark .pub-profile-btn {
   margin-bottom: 40px;
 }
 
-/* In light mode the section bg is #f2f2fc; white panel pops */
-
-/* Dark mode: elevate the panel above the #151515 section bg */
 body.dark .content-panel {
   background-color: #1e1e1e;
   box-shadow: 0 4px 32px rgba(0,0,0,0.45);
-}
-
-/* Items inside a content-panel inherit the panel bg, not the dark bg */
-.content-panel .career-highlights,
-.content-panel .research-vision,
-.content-panel .personal-note {
-  background-color: transparent;
-  box-shadow: none;
-}
-
-/* Connect footer stays on its own with an accent top-border — make it
-   pop against white contact section background if ever needed */
-.connect-footer {
-  background-color: transparent;
 }
 
 /* =============================================
