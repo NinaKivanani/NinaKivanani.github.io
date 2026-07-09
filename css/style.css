@@ -3966,31 +3966,19 @@ body.dark .pub-profile-btn {
   text-decoration: underline;
 }
 
-.service-group {
-  margin-bottom: 32px;
-}
-
-.service-group:last-child {
-  margin-bottom: 0;
-}
-
-.service-group-title {
+.service-subheading {
   font-size: 17px;
   font-weight: 700;
   color: var(--text-black-900);
   font-family: "Rubik", sans-serif;
-  margin: 0 0 18px 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  margin: 28px 0 14px 0;
 }
 
-.service-group-title .fa {
-  color: var(--skin-color);
-  font-size: 16px;
+.service-subheading:first-of-type {
+  margin-top: 0;
 }
 
-body.dark .service-group-title {
+body.dark .service-subheading {
   color: var(--text-black-900);
 }
 
