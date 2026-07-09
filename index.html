@@ -57,7 +57,6 @@
           <li><a href="#activities"><i class="fa fa-star"></i> Activities</a></li>
           <li><a href="#cv"><i class="fa fa-id-card-o"></i> Experience & CV</a></li>
           <li><a href="#news"><i class="fa fa-newspaper-o"></i> News</a></li>
-          <li><a href="#contact"><i class="fa fa-envelope-o"></i> Contact</a></li>
         </ul>
         <!-- Copyright -->
         <div class="copyright">
@@ -244,95 +243,49 @@
             </div>
           </div>
 
-          <!-- Projects sub-section -->
           <div class="row">
             <div class="research-content padd-15">
               <h3 class="subsection-heading"><i class="fa fa-briefcase"></i> Selected Projects</h3>
-            </div>
-          </div>
+              <p class="research-tagline">Flagship initiatives in Luxembourgish speech technology, biomedical AI, and STEM outreach — each with a clear research or community impact focus.</p>
 
-          <!-- Portfolio Filter -->
-          <div class="row">
-            <div class="portfolio-filter padd-15">
-              <button type="button" class="active" data-filter="all">All</button>
-              <button type="button" data-filter="luxvoice">LuxVoice</button>
-              <button type="button" data-filter="gloria">GLORIA</button>
-              <button type="button" data-filter="voicetech4teens">VoiceTech4Teens</button>
-            </div>
-          </div>
-          
-          <!-- Portfolio Items -->
-          <div class="row portfolio-items">
-            <div class="portfolio-item padd-15" data-category="luxvoice">
-              <div class="portfolio-item-inner shadow-dark">
-                <div class="portfolio-img">
-                  <img src="images/Project/logo.png" alt="LuxVoice Project">
-                  <div class="view-project">View Project</div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="portfolio-item padd-15" data-category="gloria">
-              <div class="portfolio-item-inner shadow-dark">
-                <div class="portfolio-img">
-                  <img src="images/Project/gloria.png" alt="GLORIA Project">
-                  <div class="view-project">View Project</div>
-                </div>
-              </div>
-            </div>
+              <div class="project-cards-grid">
 
-            <div class="portfolio-item padd-15" data-category="voicetech4teens">
-              <div class="portfolio-item-inner shadow-dark">
-                <div class="portfolio-img">
-                  <img src="images/Project/voicetech4teens.png" alt="VoiceTech4Teens Project">
-                  <div class="view-project">View Project</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Project Details -->
-          <div class="row">
-            <div class="project-details luxvoice-details padd-15" style="display: none;">
-              <div class="project-details-content">
-                <div class="project-image">
-                  <img src="images/Project/logo.png" alt="LuxVoice Project">
-                </div>
-                <div class="project-text">
-                  <h3>LuxVoice Project</h3>
-                  <p>LuxVoice is a groundbreaking speech technology project focused on the Luxembourgish language. Through advanced machine learning and linguistic analysis, we're creating the first comprehensive speech synthesis and recognition system for Luxembourgish.</p>
-                  <p>Our team is dedicated to preserving and promoting this unique language through cutting-edge speech technology, ensuring it remains vibrant in our increasingly digital world.</p>
-                  <button class="back-to-all-btn">Back to All Projects</button>
-                </div>
-              </div>
-            </div>
-            
-            <div class="project-details gloria-details padd-15" style="display: none;">
-              <div class="project-details-content">
-                <div class="project-image">
-                  <img src="images/Project/gloria.png" alt="GLORIA Project">
-                </div>
-                <div class="project-text">
-                  <h3>GLORIA Project</h3>
-                  <p>GLORIA (GeneraLization with chain of thought fOR bIomedical Ai) is a framework developed at the Biomedical Linked Annotation Hackathon 2025 in Tokyo, Japan, to benchmark LLM generalization in biomedical tasks.</p>
-                  <p>The project uses Chain-of-Thought (CoT) prompting for more interpretable Named Entity Recognition (NER) and diagnosis prediction in biomedical settings.</p>
-                  <a href="https://github.com/NinaHKivanani/GLORIA" target="_blank" class="link-btn"><i class="fa fa-github"></i> View on GitHub</a>
-                  <button class="back-to-all-btn">Back to All Projects</button>
-                </div>
-              </div>
-            </div>
+                <article class="project-card">
+                  <div class="project-card-image is-logo">
+                    <img src="images/Project/logo.png" alt="LuxVoice Project">
+                  </div>
+                  <div class="project-card-body">
+                    <h3>LuxVoice</h3>
+                    <p>LuxVoice develops emotionally expressive Text-to-Speech and robust ASR for Luxembourgish, supporting language digitalization, accessibility, and preservation of a low-resource language.</p>
+                    <div class="project-card-links">
+                      <a href="https://infolux.uni.lu/asr/" target="_blank" class="link-btn"><i class="fa fa-external-link"></i> Try LuxASR</a>
+                    </div>
+                  </div>
+                </article>
 
-            <div class="project-details voicetech4teens-details padd-15" style="display: none;">
-              <div class="project-details-content">
-                <div class="project-image">
-                  <img src="images/Project/voicetech4teens.png" alt="VoiceTech4Teens Project">
-                </div>
-                <div class="project-text">
-                  <h3>VoiceTech4Teens</h3>
-                  <p>VoiceTech4Teens is an educational initiative focused on introducing teenagers to speech and voice technologies through practical, hands-on activities.</p>
-                  <p>The project emphasizes accessible learning, responsible AI use, and real-world examples of speech AI in multilingual and low-resource language contexts.</p>
-                  <button class="back-to-all-btn">Back to All Projects</button>
-                </div>
+                <article class="project-card">
+                  <div class="project-card-image">
+                    <img src="images/Project/gloria.png" alt="GLORIA Project">
+                  </div>
+                  <div class="project-card-body">
+                    <h3>GLORIA</h3>
+                    <p>GLORIA benchmarks LLM generalization in biomedical tasks using Chain-of-Thought prompting for more interpretable NER and diagnosis prediction, developed at the Biomedical Linked Annotation Hackathon 2025 in Tokyo.</p>
+                    <div class="project-card-links">
+                      <a href="https://github.com/NinaHKivanani/GLORIA" target="_blank" class="link-btn"><i class="fa fa-github"></i> GitHub</a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <div class="project-card-image">
+                    <img src="images/Project/voicetech4teens.png" alt="VoiceTech4Teens Project">
+                  </div>
+                  <div class="project-card-body">
+                    <h3>VoiceTech4Teens</h3>
+                    <p>VoiceTech4Teens introduces teenagers to speech and voice technologies through hands-on workshops, emphasizing accessible learning, responsible AI, and real-world multilingual speech applications.</p>
+                  </div>
+                </article>
+
               </div>
             </div>
           </div>
