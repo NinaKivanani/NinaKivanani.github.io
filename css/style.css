@@ -82,13 +82,28 @@ select {
   background-color: #f2f2fc;
   min-height: 100vh;
   display: block;
-  padding: 70px 30px 60px;
-  position: relative;
-  overflow: visible;
+  padding: 0 30px;
+  position: fixed;
+  left: 270px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  opacity: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-/* back-section and active no longer needed for scroll layout */
-.section.back-section {}
-.section.active { opacity: 1; }
+.section.back-section {
+  z-index: 1;
+}
+.section.active {
+  z-index: 2;
+  opacity: 1;
+  -webkit-animation: slideSection 1s ease;
+  animation: slideSection 1s ease;
+}
 @-webkit-keyframes slideSection {
   0% {
     -webkit-transform: translateX(100%);
@@ -2090,8 +2105,18 @@ body.dark .shadow-dark {
   .aside.open {
     left: 0px;
   }
+  .section {
+    left: 0;
+    position: initial;
+  }
+  .section.active {
+    animation: none;
+  }
   .main-content {
     padding: 0;
+  }
+  .section.open {
+    left: 270px;
   }
   .about .about-content .personal-info .info-item p span {
     display: block;
@@ -4003,64 +4028,69 @@ body.dark .pub-profile-btn {
 }
 
 /* =============================================
-   ALTERNATING SECTION BACKGROUNDS
-   Scroll-based layout — dark and white sections
-   stack and are both visible as you scroll,
-   exactly like Bereket's page design.
+   HOME SECTION — dark hero + white content panel
+   Same section, same view: dark top (intro/photo),
+   white card below (bio + highlights).
+   Matches Bereket's within-section contrast.
    ============================================= */
 
-/* Light mode: white sections alternate with #f2f2fc default */
-.section-alt {
-  background-color: #ffffff;
+/* The home section always has a dark background so the white panel
+   below it creates strong visible contrast in one view */
+.home.section {
+  background-color: #1a1a2e;
+}
+body.dark .home.section {
+  background-color: #111111;
 }
 
-/* Dark mode: slightly elevated surface (#1e1e1e) alternates with #151515 */
-body.dark .section-alt {
-  background-color: #1e1e1e;
-}
-
-/* Cards inside white sections get a subtle shadow instead of a filled bg */
-.section-alt .publication-item,
-.section-alt .teaching-item,
-.section-alt .research-direction-card,
-.section-alt .role-item {
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-}
-
-body.dark .section-alt .publication-item,
-body.dark .section-alt .teaching-item,
-body.dark .section-alt .research-direction-card,
-body.dark .section-alt .role-item {
-  background-color: #272727;
-  box-shadow: 0 2px 14px rgba(0,0,0,0.35);
-}
-
-/* Connect footer — give it a dark accent band so it pops on the
-   white contact section in both light and dark modes */
-.connect-footer {
-  background-color: var(--bg-black-900);
-  border-radius: 12px;
-  padding: 50px 40px 36px;
-  margin-top: 30px;
-}
-
-body.dark .connect-footer {
-  background-color: #151515;
-}
-
-/* Content-panel helper kept as utility (used in home section) */
+/* White content panel — sits visibly below the dark intro area */
 .content-panel {
   background-color: #ffffff;
   border-radius: 14px;
   padding: 36px 40px;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
-  margin-top: 10px;
-  margin-bottom: 40px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+  margin: 30px 0 40px;
 }
 
 body.dark .content-panel {
-  background-color: #1e1e1e;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.45);
+  background-color: #f4f4f8;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+}
+
+/* Text inside the white panel should be dark regardless of mode */
+.content-panel,
+body.dark .content-panel {
+  color: #302e4d;
+}
+.content-panel h3,
+body.dark .content-panel h3 {
+  color: #1a1a2e;
+}
+.content-panel p,
+.content-panel li,
+body.dark .content-panel p,
+body.dark .content-panel li {
+  color: #504e70;
+}
+.content-panel strong,
+body.dark .content-panel strong {
+  color: #302e4d;
+}
+
+/* Intro photo and name stay on the dark bg — just ensure colours hold */
+.home .intro h1,
+.home .intro .role,
+.home .intro .location {
+  color: #ffffff;
+}
+.home .intro .location {
+  color: rgba(255,255,255,0.7);
+}
+
+/* personal-note inside panel inherits panel text colour */
+.content-panel .personal-note p {
+  color: #6b6988;
+  font-style: italic;
 }
 
 /* =============================================
