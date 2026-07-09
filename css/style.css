@@ -404,8 +404,7 @@ select {
 /* Home */
 .home {
   min-height: 100vh;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
 }
 .home .intro {
   text-align: center;
@@ -4149,4 +4148,171 @@ body.dark .pub-profile-btn {
   .research .portfolio-items {
     grid-template-columns: 1fr;
   }
+}
+
+/* =============================================
+   SECTION LIGHT BANDS — Bereket-style contrast
+   ============================================= */
+.home-hero {
+  padding: 48px 0 44px;
+}
+
+.home-body.section-light {
+  padding: 50px 0 60px;
+}
+
+.section-light {
+  --bg-black-900: #ffffff;
+  --bg-black-100: #ffffff;
+  --bg-black-50: #f0f3fa;
+  --text-black-900: #1e1e2e;
+  --text-black-700: #3d3d56;
+  --text-black-600: #5c5c72;
+  --card-bg: #f7f8fc;
+  --card-shadow: 0 4px 18px rgba(30, 30, 46, 0.08);
+  --card-hover-shadow: 0 8px 28px rgba(30, 30, 46, 0.14);
+  --border-color: #e2e6f0;
+  background-color: #ffffff !important;
+}
+
+/* Override hardcoded dark-mode whites inside light bands */
+body.dark .section-light .section-title h2,
+body.dark .section-light .subsection-heading,
+body.dark .home .home-body.section-light .section-title-home h2,
+body.dark .home .home-body.section-light .research-vision h3,
+body.dark .home .home-body.section-light .personal-note h3,
+body.dark .home .home-body.section-light .career-highlights h3 {
+  color: var(--text-black-900);
+}
+
+body.dark .home .home-body.section-light .intro-text p,
+body.dark .home .home-body.section-light .intro-text strong,
+body.dark .home .home-body.section-light .research-vision p,
+body.dark .home .home-body.section-light .research-vision ul li,
+body.dark .home .home-body.section-light .research-vision ul li strong,
+body.dark .home .home-body.section-light .personal-note p,
+body.dark .home .home-body.section-light .career-highlights li,
+body.dark .home .home-body.section-light .cv-link-home .cv-date {
+  color: var(--text-black-700);
+}
+
+body.dark .home .home-body.section-light .research-vision h4 {
+  color: var(--skin-color);
+}
+
+body.dark .section-light .talk-type {
+  background-color: #eef1f8;
+  color: var(--text-black-700);
+}
+
+body.dark .section-light .news-date {
+  background: linear-gradient(135deg, #eef1f8 0%, #e2e6f0 100%);
+}
+
+body.dark .section-light .news-date .month {
+  color: var(--text-black-900);
+}
+
+body.dark .section-light .news-date .year {
+  color: var(--text-black-700);
+}
+
+body.dark .section-light .connect-footer {
+  border-top-color: var(--border-color);
+}
+
+body.dark .section-light .connect-footer h3 {
+  color: var(--text-black-900);
+}
+
+body.dark .section-light .connect-copy {
+  color: var(--text-black-600);
+}
+
+body.dark .section-light .connect-links a {
+  background-color: var(--bg-black-50);
+  color: var(--text-black-700);
+}
+
+body.dark .section-light .connect-links a:hover {
+  background-color: var(--skin-color);
+  color: #fff;
+}
+
+body.dark .section-light .pub-profile-btn {
+  background-color: transparent;
+}
+
+body.dark .section-light .bibtex-citation {
+  background-color: #f4f6fb;
+  border-color: var(--border-color);
+  color: var(--text-black-900);
+}
+
+body.dark .section.section-light {
+  background-color: #ffffff !important;
+}
+
+body.dark .home .home-body.section-light .research-vision,
+body.dark .home .home-body.section-light .personal-note,
+body.dark .home .home-body.section-light .career-highlights {
+  background-color: var(--card-bg);
+  border-left-color: var(--skin-color);
+}
+
+body.dark .home .home-body.section-light .personal-note {
+  border-left-color: var(--border-color);
+}
+
+body.dark .section-light .contact-intro p,
+body.dark .section-light .contact-info-item p,
+body.dark .section-light .contact-info-item a,
+body.dark .section-light .contact-note p {
+  color: var(--text-black-700);
+}
+
+body.dark .section-light .contact-info-item h3,
+body.dark .section-light .contact-note strong {
+  color: var(--text-black-900);
+}
+
+body.dark .section-light .contact-info-item,
+body.dark .section-light .contact-info-item:hover {
+  background-color: var(--card-bg);
+  box-shadow: var(--card-shadow);
+}
+
+body.dark .section-light .contact-info-item:hover {
+  box-shadow: var(--card-hover-shadow);
+}
+
+body.dark .section-light .contact-note {
+  background-color: var(--bg-black-50);
+  border-left-color: var(--border-color);
+}
+
+body.dark .section-light .contact-social a {
+  background-color: var(--bg-black-50);
+  color: var(--text-black-700);
+  box-shadow: none;
+}
+
+body.dark .section-light .contact-social a:hover {
+  background-color: var(--skin-color);
+  color: #fff;
+}
+
+body.dark .section-light .contact-icon,
+body.dark .section-light .research-icon {
+  color: var(--skin-color);
+}
+
+body.dark .section-light .teaching-item strong {
+  color: var(--text-black-900);
+}
+
+body.dark .section-light .publication-item a:not(.link-btn):hover,
+body.dark .section-light .teaching-item a:not(.link-btn):hover,
+body.dark .section-light .teaching-body a:not(.link-btn):hover {
+  color: var(--skin-color);
 }
