@@ -3998,6 +3998,14 @@ body.dark .service-subheading {
   justify-content: center;
   padding: 16px;
   min-height: 80px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.collaborator-logo:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .collaborator-logo img {
@@ -4006,21 +4014,20 @@ body.dark .service-subheading {
   width: auto;
   height: auto;
   object-fit: contain;
-  filter: grayscale(100%) opacity(0.7);
-  transition: all 0.3s ease;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
 
-.collaborator-logo img:hover {
-  filter: grayscale(0%) opacity(1);
-  transform: scale(1.05);
+.collaborator-logo:hover img {
+  opacity: 1;
 }
 
-body.dark .collaborator-logo img {
-  filter: grayscale(100%) opacity(0.5) brightness(1.2);
+body.dark .collaborator-logo {
+  background-color: #ffffff;
 }
 
-body.dark .collaborator-logo img:hover {
-  filter: grayscale(0%) opacity(0.9) brightness(1);
+body.dark .collaborator-logo:hover {
+  box-shadow: 0 4px 16px rgba(255,255,255,0.1);
 }
 
 @media (max-width: 767px) {
