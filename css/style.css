@@ -3982,6 +3982,47 @@ body.dark .service-subheading {
   color: var(--text-black-900);
 }
 
+/* Collaborative Network / Partners Grid */
+.collaborators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 32px 24px;
+  align-items: center;
+  margin-top: 32px;
+  padding: 20px 0;
+}
+
+.collaborator-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  min-height: 80px;
+}
+
+.collaborator-logo img {
+  max-width: 100%;
+  max-height: 60px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.7);
+  transition: all 0.3s ease;
+}
+
+.collaborator-logo img:hover {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.05);
+}
+
+body.dark .collaborator-logo img {
+  filter: grayscale(100%) opacity(0.5) brightness(1.2);
+}
+
+body.dark .collaborator-logo img:hover {
+  filter: grayscale(0%) opacity(0.9) brightness(1);
+}
+
 @media (max-width: 767px) {
   .roles-grid {
     grid-template-columns: 1fr;
