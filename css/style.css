@@ -4136,7 +4136,9 @@ body.dark .collaborator-logo:hover {
 
 .project-card-image.is-logo img {
   object-fit: contain;
-  padding: 28px;
+  padding: 20px;
+  max-height: 100%;
+  width: 100%;
 }
 
 .project-card-body {
