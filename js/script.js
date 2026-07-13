@@ -102,72 +102,23 @@ if (lightbox) {
 }
 
 
-// Aside Navbar — tab-based navigation
+// Responsive sidebar controls
+const allSection = document.querySelectorAll(".section");
+const navTogglerBtn = document.querySelector(".nav-toggler");
+const aside = document.querySelector(".aside");
 
-const nav = document.querySelector(".nav"),
-    navList = nav.querySelectorAll("li"),
-    totalNavList = navList.length,
-    allSection = document.querySelectorAll(".section"),
-    totalSection = allSection.length;
-
-for (let i = 0; i < totalNavList; i++) {
-    const a = navList[i].querySelector("a");
-    a.addEventListener("click", function () {
-        removeBackSectionClass();
-        for (let i = 0; i < totalSection; i++) {
-            allSection[i].classList.remove("back-section");
-        }
-        for (let j = 0; j < totalNavList; j++) {
-            if (navList[j].querySelector("a").classList.contains("active")) {
-                addBackSectionClass(j);
-            }
-            navList[j].querySelector("a").classList.remove("active");
-        }
-        this.classList.add("active");
-        showSection(this);
-        if (window.innerWidth < 1200) {
-            asideSectionTogglerBtn();
-        }
-    });
+if (navTogglerBtn && aside) {
+    navTogglerBtn.addEventListener("click", asideSectionTogglerBtn);
 }
 
-function removeBackSectionClass() {
-    for (let i = 0; i < totalSection; i++) {
-        allSection[i].classList.remove("back-section");
-    }
-}
-
-function addBackSectionClass(num) {
-    allSection[num].classList.add("back-section");
-}
-
-function showSection(element) {
-    for (let i = 0; i < totalSection; i++) {
-        allSection[i].classList.remove("active");
-    }
-    const target = element.getAttribute("href").split("#")[1];
-    document.querySelector("#" + target).classList.add("active");
-}
-
-function updateNav(element) {
-    for (let i = 0; i < totalNavList; i++) {
-        navList[i].querySelector("a").classList.remove("active");
-        const target = element.getAttribute("href").split("#")[1];
-        if (target === navList[i].querySelector("a").getAttribute("href").split("#")[1]) {
-            navList[i].querySelector("a").classList.add("active");
-        }
-    }
-}
-
-const navTogglerBtn = document.querySelector(".nav-toggler"),
-    aside = document.querySelector(".aside");
-navTogglerBtn.addEventListener("click", asideSectionTogglerBtn);
 function asideSectionTogglerBtn() {
+    if (!aside || !navTogglerBtn) {
+        return;
+    }
+
     aside.classList.toggle("open");
     navTogglerBtn.classList.toggle("open");
-    for (let i = 0; i < totalSection; i++) {
-        allSection[i].classList.toggle("open");
-    }
+    allSection.forEach((section) => section.classList.toggle("open"));
 }
 
 // Citation copy and toggle function
@@ -203,32 +154,60 @@ function copyBibTeX(citationId) {
     });
 }
 
-// Section Activation
-document.addEventListener("click", (e) => {
-    if(e.target.classList.contains("link-item") || e.target.closest(".nav") !== null) {
-        const target = e.target.closest("a");
-        if (target) {
-            const sectionId = target.getAttribute("href");
-            if (sectionId) {
-                e.preventDefault();
-                const section = document.querySelector(sectionId);
-                if (section) {
-                    // Remove active class from all sections
-                    document.querySelectorAll(".section.active").forEach((section) => {
-                        section.classList.remove("active");
-                    });
-                    // Remove active class from all nav items
-                    document.querySelectorAll(".nav a").forEach((nav) => {
-                        nav.classList.remove("active");
-                    });
-                    // Add active class to clicked nav item
-                    target.classList.add("active");
-                    // Add active class to current section
-                    section.classList.add("active");
-                }
-            }
+// Section activation for sidebar links and calls-to-action
+function activateSection(sectionId, updateHistory = true) {
+    if (!sectionId || !sectionId.startsWith("#")) {
+        return;
+    }
+
+    const section = document.querySelector(sectionId);
+    if (!section || !section.classList.contains("section")) {
+        return;
+    }
+
+    document.querySelectorAll(".section").forEach((item) => {
+        item.classList.remove("back-section");
+    });
+    document.querySelectorAll(".section.active").forEach((item) => {
+        item.classList.remove("active");
+        if (item !== section) {
+            item.classList.add("back-section");
+        }
+    });
+    document.querySelectorAll(".nav a").forEach((item) => {
+        item.classList.toggle("active", item.getAttribute("href") === sectionId);
+    });
+
+    section.classList.add("active");
+    section.scrollTop = 0;
+
+    if (updateHistory && window.location.hash !== sectionId) {
+        window.history.pushState(null, "", sectionId);
+    }
+}
+
+document.addEventListener("click", (event) => {
+    const link = event.target.closest("a");
+    if (!link || (!link.classList.contains("link-item") && !link.closest(".nav"))) {
+        return;
+    }
+
+    const sectionId = link.getAttribute("href");
+    if (sectionId && sectionId.startsWith("#")) {
+        event.preventDefault();
+        activateSection(sectionId);
+        if (link.closest(".nav") && window.innerWidth < 1200 && aside && aside.classList.contains("open")) {
+            asideSectionTogglerBtn();
         }
     }
+});
+
+window.addEventListener("popstate", () => {
+    activateSection(window.location.hash || "#home", false);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    activateSection(window.location.hash || "#home", false);
 });
 
 // Keep external links safe when opening in new tabs
