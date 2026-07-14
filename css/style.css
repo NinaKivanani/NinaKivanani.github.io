@@ -4700,6 +4700,19 @@ body.dark .collaborator-logo:hover {
   object-fit: contain;
 }
 
+.project-visual.is-logo {
+  align-items: center;
+}
+
+.project-visual.is-logo img {
+  object-fit: contain;
+  object-position: center;
+  max-height: 280px;
+  min-height: 200px;
+  width: 100%;
+  padding: 20px;
+}
+
 .project-meta {
   display: flex;
   flex-wrap: wrap;
