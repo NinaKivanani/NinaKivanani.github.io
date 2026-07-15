@@ -4009,11 +4009,125 @@ body.dark .pub-profile-btn {
   color: var(--text-black-700);
 }
 
+.activity-entry-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-entry {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.activity-entry:first-child {
+  padding-top: 0;
+}
+
+.activity-entry:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.activity-entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.activity-entry-head h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-black-900);
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.activity-entry-head h4 .fa {
+  color: var(--skin-color);
+  margin-right: 8px;
+}
+
+.activity-tag {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--skin-color);
+  background-color: rgba(33, 150, 243, 0.09);
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.activity-meta {
+  font-size: 13px;
+  color: var(--text-black-700);
+  margin: 6px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.activity-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-black-700);
+  margin: 10px 0 0;
+}
+
+.activity-entry .clean-list,
+.activity-entry .teaching-list {
+  margin: 10px 0 0;
+}
+
+.activity-links {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+body.dark .activity-tag {
+  background-color: rgba(33, 150, 243, 0.16);
+}
+
+.activity-section-panel .feature-grid {
+  margin: 0;
+  gap: 0;
+  display: block;
+}
+
+.activity-section-panel .feature-card {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.activity-section-panel .feature-card:first-child {
+  padding-top: 0;
+}
+
+.activity-section-panel .feature-card:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
 body.dark .activity-section-panel {
   border-color: rgba(255, 255, 255, 0.08);
 }
 
-body.dark .activity-list.in-panel li {
+body.dark .activity-list.in-panel li,
+body.dark .activity-entry,
+body.dark .activity-section-panel .feature-card {
   border-bottom-color: rgba(255, 255, 255, 0.08);
 }
 
