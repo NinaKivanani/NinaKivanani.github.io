@@ -4701,12 +4701,13 @@ body.dark .collaborator-logo:hover {
 }
 
 .project-visual.is-logo {
-  align-items: center;
+  align-items: flex-start;
+  align-self: start;
 }
 
 .project-visual.is-logo img {
   object-fit: contain;
-  object-position: center;
+  object-position: top center;
   max-height: 280px;
   min-height: 200px;
   width: 100%;
