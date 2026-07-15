@@ -3960,6 +3960,63 @@ body.dark .pub-profile-btn {
   text-decoration: underline;
 }
 
+.activity-section-panel {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 22px 26px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+}
+
+.activity-list.in-panel li {
+  padding: 12px 0;
+  margin-bottom: 0;
+  background: transparent;
+  border-left: none;
+  box-shadow: none;
+  border-radius: 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.activity-list.in-panel li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.activity-list.in-panel li:first-child {
+  padding-top: 0;
+}
+
+.activity-list.in-panel .activity-content h4 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-black-900);
+  font-family: "Rubik", sans-serif;
+}
+
+.activity-list.in-panel .activity-content p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-black-700);
+}
+
+.grant-funding {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--text-black-700);
+}
+
+body.dark .activity-section-panel {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark .activity-list.in-panel li {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
 .service-subheading {
   font-size: 17px;
   font-weight: 700;
