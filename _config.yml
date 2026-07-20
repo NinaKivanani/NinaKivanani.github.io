@@ -1,3 +1,9 @@
+title: Nina Hosseini-Kivanani
+description: Personal website showcasing research in NLP, Computer Vision, and Multilingual Speech Recognition
+author: Nina Hosseini-Kivanani
+email: hkivanani@gmail.com
+baseurl: ""
+url: "https://ninakivanani.github.io"
+
+# GitHub Pages configuration
 theme: jekyll-theme-minimal
-title: Octocat's homepage
-description: Bookmark this to keep an eye on my project updates!

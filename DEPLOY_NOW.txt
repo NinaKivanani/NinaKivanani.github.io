@@ -1,0 +1,55 @@
+═══════════════════════════════════════════════════════════
+   🚀 DEPLOY YOUR WEBSITE NOW - Copy & Paste These Commands
+═══════════════════════════════════════════════════════════
+
+Open Terminal and run these commands ONE BY ONE:
+
+
+📍 Step 1: Navigate to your project
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+cd /Users/nina.hosseinikivanan/Desktop/main/personal-webpage
+
+
+📍 Step 2: Check what's changed
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+git status
+
+
+📍 Step 3: Add all your files
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+git add .
+
+
+📍 Step 4: Commit your changes
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+git commit -m "Website setup complete - ready for deployment"
+
+
+📍 Step 5: Push to GitHub
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+git push
+
+
+⏰ WAIT 1-2 MINUTES, THEN:
+
+
+📍 Step 6: Visit your live website!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Open your browser and go to:
+https://ninakivanani.github.io/
+
+or check your actual GitHub Pages URL in:
+https://github.com/NinaHKivanani/NinaKivanani/settings/pages
+
+
+═══════════════════════════════════════════════════════════
+   🎉 That's it! Your website will be live!
+═══════════════════════════════════════════════════════════
+
+❓ Need Help?
+  → See DEPLOYMENT_GUIDE.md for detailed instructions
+  → See README.md for complete documentation
+  → See SETUP_COMPLETE.md for what was changed
+
+═══════════════════════════════════════════════════════════
+
