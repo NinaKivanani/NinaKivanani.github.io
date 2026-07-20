@@ -4862,13 +4862,13 @@ body.dark .collaborator-logo:hover {
   justify-content: center;
   align-self: start;
   width: 100%;
-  min-height: clamp(220px, 24vw, 260px);
+  min-height: clamp(190px, 20vw, 230px);
 }
 
 .project-visual img {
   width: 100%;
-  height: clamp(220px, 24vw, 260px);
-  max-height: clamp(220px, 24vw, 260px);
+  height: clamp(190px, 20vw, 230px);
+  max-height: clamp(190px, 20vw, 230px);
   padding: 14px;
   border-radius: 16px;
   background: #fff;
@@ -4877,8 +4877,8 @@ body.dark .collaborator-logo:hover {
 }
 
 .project-visual.is-logo {
-  height: clamp(220px, 24vw, 260px);
-  min-height: clamp(220px, 24vw, 260px);
+  height: clamp(190px, 20vw, 230px);
+  min-height: clamp(190px, 20vw, 230px);
   border-radius: 16px;
   background: #fff;
   overflow: hidden;
