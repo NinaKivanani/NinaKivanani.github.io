@@ -4885,6 +4885,23 @@ body.dark .collaborator-logo:hover {
   padding: 20px;
 }
 
+.project-detail.flagship.has-wide-logo {
+  grid-template-columns: 1fr;
+}
+
+.project-detail.flagship.has-wide-logo .project-visual.is-logo-wide {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto 8px;
+}
+
+.project-detail.flagship.has-wide-logo .project-visual.is-logo-wide img {
+  min-height: auto;
+  max-height: 240px;
+  width: 100%;
+  padding: 28px 36px;
+}
+
 .project-meta {
   display: flex;
   flex-wrap: wrap;
