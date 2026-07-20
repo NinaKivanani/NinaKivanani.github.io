@@ -4150,19 +4150,19 @@ body.dark .service-subheading {
 /* Collaborative Network / Partners Grid */
 .collaborators-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 32px 24px;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 20px 16px;
   align-items: center;
-  margin-top: 32px;
-  padding: 20px 0;
+  margin-top: 24px;
+  padding: 12px 0;
 }
 
 .collaborator-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px;
-  min-height: 80px;
+  padding: 10px 12px;
+  min-height: 64px;
   background-color: #ffffff;
   border-radius: 8px;
   transition: all 0.3s ease;
@@ -4175,7 +4175,7 @@ body.dark .service-subheading {
 
 .collaborator-logo img {
   max-width: 100%;
-  max-height: 60px;
+  max-height: 46px;
   width: auto;
   height: auto;
   object-fit: contain;
