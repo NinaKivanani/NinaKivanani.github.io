@@ -4842,6 +4842,25 @@ body.dark .collaborator-logo:hover {
   background: var(--bg-black-50);
 }
 
+.track-grid-compact {
+  grid-template-columns: 1fr 1fr;
+}
+
+.track-links {
+  margin: 16px 0 0 !important;
+  font-size: 14px;
+  color: var(--text-black-700);
+}
+
+.track-links a {
+  color: var(--skin-color);
+  font-weight: 700;
+}
+
+.track-links a:hover {
+  text-decoration: underline;
+}
+
 .project-detail {
   padding: clamp(30px, 5vw, 56px);
   border: 1px solid var(--border-color);
