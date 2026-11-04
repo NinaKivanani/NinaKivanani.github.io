@@ -5220,3 +5220,12 @@ body.dark .secondary-link {
   font-style: italic;
   text-transform: none;
 }
+
+/* Phone/tablet menu button: dark to match the site */
+body.dark .aside .nav-toggler {
+  background-color: rgba(30, 30, 34, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
