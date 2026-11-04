@@ -5244,3 +5244,12 @@ body.dark .aside .nav-toggler {
   .news-list li { flex-direction: column; gap: 2px; }
   .news-list .news-when { flex-basis: auto; }
 }
+
+/* Home: compact project tiles */
+.project-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; }
+.project-tile { display: block; border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; overflow: hidden; background: rgba(255,255,255,0.03); text-decoration: none; color: inherit; transition: transform .2s ease, border-color .2s ease; }
+.project-tile:hover { transform: translateY(-3px); border-color: var(--skin-color); }
+.project-tile .tile-art { display: block; width: 100%; aspect-ratio: 3 / 2; height: auto; object-fit: cover; }
+.project-tile .tile-body { padding: 16px 18px 20px; }
+.project-tile h3 { margin: 0 0 6px; font-size: 18px; color: #fff; }
+.project-tile p { margin: 0; font-size: 14.5px; line-height: 1.55; color: rgba(255,255,255,0.72); }
