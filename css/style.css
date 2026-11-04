@@ -5229,3 +5229,18 @@ body.dark .aside .nav-toggler {
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
 }
+
+/* News: compact dated list instead of boxed cards */
+.news-list { list-style: none; margin: 0; padding: 0; max-width: 900px; }
+.news-list li { display: flex; gap: 24px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08); line-height: 1.6; }
+.news-list li:last-child { border-bottom: none; }
+.news-list .news-when { flex: 0 0 80px; color: var(--skin-color); font-weight: 600; font-size: 14px; padding-top: 2px; white-space: nowrap; }
+.news-list .news-what { color: rgba(255,255,255,0.86); font-size: 16px; }
+.news-list .news-links { white-space: nowrap; font-size: 14px; }
+.news-list .news-links::before { content: "→ "; color: var(--skin-color); }
+.news-list .news-links a { color: var(--skin-color); text-decoration: none; }
+.news-list .news-links a:hover { text-decoration: underline; }
+@media (max-width: 575px) {
+  .news-list li { flex-direction: column; gap: 2px; }
+  .news-list .news-when { flex-basis: auto; }
+}
