@@ -336,3 +336,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.querySelector('.portfolio-filter button[data-filter="all"]').click();
 });
+/* Contact form: build a pre-filled email instead of a raw form POST to mailto */
+(function () {
+  var form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var v = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; };
+      var name = v('contact-name'), reason = v('contact-reason');
+      var subject = 'Website contact: ' + reason + (name ? ' – ' + name : '');
+      var body = 'Name: ' + name + '\nEmail: ' + v('contact-email') +
+        '\nOrganisation: ' + v('contact-organisation') + '\nReason: ' + reason +
+        '\n\n' + v('contact-message');
+      window.location.href = 'mailto:nina.hosseinikivanani@ext.uni.lu?subject=' +
+        encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    });
+  }
+  document.querySelectorAll('.copy-email-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var label = btn.querySelector('span');
+      var done = function () { label.textContent = 'Copied'; setTimeout(function () { label.textContent = 'Copy address'; }, 2000); };
+      var email = btn.getAttribute('data-email');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(done, function () { window.prompt('Copy this address:', email); });
+      } else { window.prompt('Copy this address:', email); }
+    });
+  });
+})();

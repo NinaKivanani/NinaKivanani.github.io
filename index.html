@@ -1895,7 +1895,7 @@
 
           <div class="row">
             <div class="contact-content padd-15">
-              <form class="contact-form modern-contact-form" action="mailto:nina.hosseinikivanani@ext.uni.lu" method="post" enctype="text/plain">
+              <form id="contact-form" class="contact-form modern-contact-form" action="mailto:nina.hosseinikivanani@ext.uni.lu" method="post" enctype="text/plain">
                 <div class="form-grid">
                   <div class="form-item"><label for="contact-name">Name</label><input id="contact-name" name="name" type="text" class="form-control" required></div>
                   <div class="form-item"><label for="contact-email">Email</label><input id="contact-email" name="email" type="email" class="form-control" required></div>
@@ -1905,6 +1905,10 @@
                 </div>
                 <button type="submit" class="btn-home">Prepare Email</button>
                 <p class="form-note">Submitting opens your email application so you can review the message before sending.</p>
+                <div class="contact-direct">
+                  <span>Prefer to write directly? <a href="mailto:nina.hosseinikivanani@ext.uni.lu" class="text-link">nina.hosseinikivanani@ext.uni.lu</a></span>
+                  <button type="button" class="copy-email-btn" data-email="nina.hosseinikivanani@ext.uni.lu"><i class="fa fa-clone"></i> <span>Copy address</span></button>
+                </div>
               </form>
 
               <div class="contact-note">

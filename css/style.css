@@ -5197,3 +5197,9 @@ body.dark .secondary-link {
   hyphens: auto;
   text-wrap: pretty;
 }
+
+/* Direct email fallback under the contact form */
+.contact-direct { color: var(--text-black-600); display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 18px; font-size: 15px; }
+.contact-direct a { word-break: break-all; }
+.copy-email-btn { background: transparent; border: 1px solid var(--skin-color); color: var(--skin-color); border-radius: 40px; padding: 6px 14px; font-size: 14px; cursor: pointer; font-family: inherit; }
+.copy-email-btn:hover { opacity: .8; }
