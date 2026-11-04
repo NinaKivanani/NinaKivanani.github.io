@@ -5203,3 +5203,6 @@ body.dark .secondary-link {
 .contact-direct a { word-break: break-all; }
 .copy-email-btn { background: transparent; border: 1px solid var(--skin-color); color: var(--skin-color); border-radius: 40px; padding: 6px 14px; font-size: 14px; cursor: pointer; font-family: inherit; }
 .copy-email-btn:hover { opacity: .8; }
+
+/* About page: action buttons without the slogan panel */
+.about-actions { margin: 40px 0 10px; }
