@@ -5244,3 +5244,8 @@ body.dark .aside .nav-toggler {
   .news-list li { flex-direction: column; gap: 2px; }
   .news-list .news-when { flex-basis: auto; }
 }
+
+/* Projects: full-width explanatory diagram above each project's text */
+.project-detail.flagship.has-diagram { grid-template-columns: 1fr; gap: 28px; }
+.project-visual.project-diagram { min-height: 0; justify-content: flex-start; }
+.project-visual.project-diagram img { width: 100%; max-width: 760px; height: auto; max-height: none; padding: 0; background: none; border-radius: 14px; border: 1px solid rgba(255,255,255,0.08); }
