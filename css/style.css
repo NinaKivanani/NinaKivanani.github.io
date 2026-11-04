@@ -5180,7 +5180,7 @@ body.dark .secondary-link {
   }
 }
 
-/* Justified narrative text (Home + About + Projects + News) */
+/* Narrative text (Home + About + Projects + News): left-aligned, no auto-hyphenation */
 #home .page-hero .hero-copy p,
 #home .page-hero blockquote,
 #home .split-block p,
@@ -5193,8 +5193,8 @@ body.dark .secondary-link {
 #projects .project-columns p,
 #projects .content-block .feature-card p,
 #news .news-body p {
-  text-align: justify;
-  hyphens: auto;
+  text-align: left;
+  hyphens: manual;
   text-wrap: pretty;
 }
 
